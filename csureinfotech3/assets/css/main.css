@@ -2375,7 +2375,7 @@ section {
 }
 
 .blog .sidebar .search-form form button:hover {
-  background: rgba(0, 131, 116, 0.8);
+  background:white;
 }
 
 .blog .sidebar .categories ul {
@@ -2553,7 +2553,7 @@ section {
 
 .blog .comments .reply-form input:focus {
   box-shadow: none;
-  border-color: rgba(0, 131, 116, 0.8);
+  border-color: white;
 }
 
 .blog .comments .reply-form textarea {
@@ -2564,7 +2564,7 @@ section {
 
 .blog .comments .reply-form textarea:focus {
   box-shadow: none;
-  border-color: rgba(0, 131, 116, 0.8);
+  border-color: white;
 }
 
 .blog .comments .reply-form .form-group {
@@ -2587,19 +2587,21 @@ section {
 --------------------------------------------------------------*/
 .footer {
   font-size: 14px;
-  background-color: #efc9af;
-  padding: 50px 0;
+  background-color: #efc9af; 
+  padding-top: 50px 0;
   color: #104c91;
 }
 
 .footer .footer-info .logo {
   line-height: 0;
   margin-bottom: 25px;
+  
 }
 
 .footer .footer-info .logo img {
   max-height: 40px;
   margin-right: 6px;
+  
 }
 
 .footer .footer-info .logo span {
@@ -2608,11 +2610,22 @@ section {
   letter-spacing: 1px;
   color: #104c91;
   font-family: var(--font-primary);
+  
+}
+
+.MarginClass{
+  margin-left: -160px;
+  padding-top: 35px;
+}
+
+.Copyright{
+  margin-bottom: 100%;
 }
 
 .footer .footer-info p {
   font-size: 14px;
   font-family: var(--font-primary);
+  
 }
 
 .footer .social-links a {
@@ -2653,7 +2666,7 @@ section {
 
 .footer .footer-links ul i {
   padding-right: 2px;
-  color: rgba(0, 131, 116, 0.8);
+  color: white;
   font-size: 12px;
   line-height: 0;
 }
@@ -2685,6 +2698,7 @@ section {
 
 .footer .copyright {
   text-align: center;
+  margin-left: 675px;
 }
 
 .footer .credits {
@@ -2695,4 +2709,44 @@ section {
 
 .footer .credits a {
   color: #104c91;
+}
+
+.footerUserLinkMargin{
+  margin-left: 220px;
+}
+
+.MarginUsefulLink{
+  margin-left: 13px;
+}
+
+.LinkColor{
+  color: #104c91;
+}
+.LinkColor:hover{
+  color: white;
+}
+
+.FooterDiv{
+  margin-top: 5px;
+}
+
+.MacDiv{
+  margin-top: 1px;
+}
+
+.UsefulLinksDiv{
+  margin-left: 110px;
+  margin-top: 20px;
+}
+
+.ContactDiv{
+  margin-top: 20px;
+}
+
+.DivCotact{
+  background-color: #efc9af;
+  padding: 50px;
+}
+.PhoneEmailMl{
+  margin-left: 3px;
 }
