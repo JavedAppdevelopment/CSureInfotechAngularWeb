@@ -35,8 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (nextElement) nextElement.classList.remove('sticked-header-offset');
       }
     }
-    window.addEventListener('load', headerFixed);
-    document.addEventListener('scroll', headerFixed);
+    //window.addEventListener('load', headerFixed);
+    //document.addEventListener('scroll', headerFixed);
   }
 
   /**
