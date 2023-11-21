@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
     //window.addEventListener('load', headerFixed);
-    //document.addEventListener('scroll', headerFixed);
+    document.addEventListener('scroll', headerFixed);
   }
 
   /**
