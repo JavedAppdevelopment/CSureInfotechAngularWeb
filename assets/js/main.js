@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     })
   }
-  window.addEventListener('load', navbarlinksActive);
+  //window.addEventListener('load', navbarlinksActive);
   document.addEventListener('scroll', navbarlinksActive);
 
   /**
