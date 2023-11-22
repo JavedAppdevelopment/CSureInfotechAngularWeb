@@ -2731,12 +2731,12 @@ section {
 }
 
 .MacDiv{
-  margin-top: 1px;
+
 }
 
 .UsefulLinksDiv{
   margin-left: 110px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .ContactDiv{
@@ -2745,7 +2745,7 @@ section {
 
 .DivCotact{
   background-color: #efc9af;
-  padding: 50px;
+ 
 }
 .PhoneEmailMl{
   margin-left: 3px;
