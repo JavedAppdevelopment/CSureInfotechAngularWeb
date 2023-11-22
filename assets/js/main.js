@@ -8,6 +8,9 @@
 document.addEventListener('DOMContentLoaded', () => {
   "use strict";
 
+  /**
+   * Preloader
+   */
   const preloader = document.querySelector('#preloader');
   if (preloader) {
     window.addEventListener('load', () => {
@@ -58,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     })
   }
-  //window.addEventListener('load', navbarlinksActive);
+  window.addEventListener('load', navbarlinksActive);
   document.addEventListener('scroll', navbarlinksActive);
 
   /**
