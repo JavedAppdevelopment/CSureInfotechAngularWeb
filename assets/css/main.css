@@ -2715,10 +2715,6 @@ section {
   margin-left: 220px;
 }
 
-.MarginUsefulLink{
-  margin-left: 13px;
-}
-
 .LinkColor{
   color: #104c91;
 }
@@ -2728,10 +2724,6 @@ section {
 
 .FooterDiv{
   margin-top: 5px;
-}
-
-.MacDiv{
-  margin-top: 1px;
 }
 
 .UsefulLinksDiv{
@@ -2745,8 +2737,15 @@ section {
 
 .DivCotact{
   background-color: #efc9af;
-  padding: 50px;
+  margin-left: 50px;
 }
 .PhoneEmailMl{
   margin-left: 3px;
 }
+
+@media only screen and (max-width: 250) 
+    {
+      .foterMediaQeury {
+        padding: 50px;
+      }
+    }
