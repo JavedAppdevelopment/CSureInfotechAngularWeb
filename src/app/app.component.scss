@@ -135,11 +135,27 @@
     border:2px solid #104c91;
 }
 
-// new code //
-
-
-
-
+// LinkButton Class accessnew code //
+li {
+    margin-bottom: 10px;
+}
+.cool-link {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+}
+.cool-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #104c91;
+    transition: width .3s;
+    margin-top: 6px;
+}
+.cool-link:hover::after {
+    width: 100%;
+}
 
 
 

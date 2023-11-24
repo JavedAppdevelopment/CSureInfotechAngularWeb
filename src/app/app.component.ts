@@ -156,18 +156,21 @@ export class AppComponent {
   // Validation SubjectClickEvent //
   SubjectClickEvent(subject: string)
   {
-    console.log("subject :"  + subject);
+    //console.log("subject :"  + subject);
 
     //hitesh code start
-    /*var pattern = new RegExp("/^[a-zA-Z ]{3,20}$/");
-    if(!pattern.test(subject))
+    var pattern = new RegExp("^[a-zA-Z ]{1,20}$");
+    if(subject == "")
     {
-      console.log("NotSuccessfully");
+      this.subjectErrorMsg= "Please enter your subject";
     }
-    else
+    else if(!pattern.test(subject))
     {
-      console.log("Successfully Email Address");
-    }*/
+      this.subjectErrorMsg = "Please enter your subject";
+    }
+    else{
+      this.subjectErrorMsg = "";
+    }
   }
 
   // Validation MessageClickEvent //
@@ -175,15 +178,18 @@ export class AppComponent {
   {
     console.log("message :"  + message);
 
-    /*var pattern = new RegExp("^[a-zA-Z ]{3,50}$");
-    if(!pattern.test(message))
+    var pattern = new RegExp("^[a-zA-Z ]{1,50}$");
+    if(message == "")
     {
-      console.log("NotSuccessfully");
+      this.messageErrorMsg = "Please enter your message";
     }
-    else
+    else if(!pattern.test(message))
     {
-      console.log("Successfully Email Address");
-    }*/
+      this.messageErrorMsg = "Please enter your message";
+    }
+    else{
+      this.messageErrorMsg = "";
+    }
   }
 }
 
