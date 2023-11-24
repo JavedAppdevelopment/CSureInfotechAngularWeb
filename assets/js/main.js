@@ -180,6 +180,10 @@ document.addEventListener('DOMContentLoaded', () => {
       992: {
         slidesPerView: 12,
         spaceBetween: 120
+      },
+      1152: {
+        slidesPerView: 15,
+        spaceBetween: 150
       }
     }
   });
