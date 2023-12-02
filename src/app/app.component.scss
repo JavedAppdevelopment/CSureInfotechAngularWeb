@@ -95,7 +95,7 @@
     margin-left: -64px;
 }
 .YearsExperienceText{
-    margin-left: 51px;
+    margin-left: 53px;
 }
 .OurMissionAllText{
     color: #1f8ac0;
@@ -135,9 +135,11 @@
     border:2px solid #104c91;
 }
 
+
 // LinkButton Class accessnew code //
 li {
     margin-bottom: 10px;
+    color:black;
 }
 .cool-link {
     display: inline-block;
@@ -147,16 +149,16 @@ li {
 .cool-link::after {
     content: '';
     display: block;
-    width: 0;
+    width: 0px;
     height: 2px;
-    background: #104c91;
-    transition: width .3s;
-    margin-top: 6px;
+    transition: width .2s;
+    transition: all 0.3s ease-in-out 0s;
+    //margin-top: 3px;
+    border-bottom: 2px solid #104c91;
 }
 .cool-link:hover::after {
     width: 100%;
+    color: #104c91;
 }
-
-
 
 

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -38,22 +37,107 @@
 </head>
 
 <script>
-function changeStyle(){
-        var element = document.getElementById("name");
+function changeStyle()
+{
+        var element = document.getElementById("name");    
         element.style.borderColor = "red";
+      
         var element = document.getElementById("email");
         element.style.borderColor = "red";
+
         var element = document.getElementById("subject");
         element.style.borderColor = "red";
+
         var element = document.getElementById("message");
         element.style.borderColor = "red";
-    }
-  </script>
+} 
+
+function NameFunction()
+{  
+  //NameJQuery validation (Border Change Validation)
+  var nameElement = document.getElementById("name");
+  var name = nameElement.value;
+  //console.log("Name Changed : " + name + "InnetHtml : " + nameElement.innerHTML + ", " + nameElement.innerText + ", " + nameElement.value);
+  if(name === "^[a-zA-Z ]{1,}$" || name === "")
+  {
+    //console.log("If Part executing");
+    nameElement.style.borderColor = "#104c91";
+  }
+  else if(!name.text(name))   
+  {
+    nameElement.style.borderColor = "red";
+  }    
+  else{
+    nameElement.style.borderColor = "red";
+  }  
+}
+
+function EmailFunction()
+{
+  //EmailJQuery validation (Border Change Validation)
+  var emailElement = document.getElementById("email");
+  var email = emailElement.value;
+  //console.log("Email Changed : " + email + "InnetHtml : " + emailElement.innerHTML + ", " + emailElement.innerText + ", " + emailElement.value);
+  if(email === "")
+  {
+    console.log("If Part executing");
+    emailElement.style.borderColor = "#104c91";
+  }
+  else if(!email.text(email))   
+  {
+    emailElement.style.borderColor = "red";
+  }    
+  else{
+    emailElement.style.borderColor = "red";
+  }  
+}
+
+function SubjectFunction()
+{
+   //SubjectJQuery validation (Border Change Validation)
+  var subjectElement = document.getElementById("subject");
+  var subject = subjectElement.value;
+  //console.log("Subject Changed : " + subject + "InnetHtml : " + subjectElement.innerHTML + ", " + subjectElement.innerText + ", " + subjectElement.value);
+  if(subject === "^[a-zA-Z ]{1,20}$" || subject === "")
+  {
+    //console.log("If Part executing");
+    subjectElement.style.borderColor = "#104c91";
+  }
+  else if(!subject.text(subject))   
+  {
+    subjectElement.style.borderColor = "red";
+  }    
+  else{
+    subjectElement.style.borderColor = "red"
+  }  
+}
+  
+function MessageFunction()
+{
+   //MessageJQuery validation (Border Change Validation)
+  var messageElement = document.getElementById("message");
+  var message = messageElement.value;
+  //console.log("Message Changed : " + message + "InnetHtml : " + messageElement.innerHTML + ", " + messageElement.innerText + ", " + messageElement.value);
+  if(message === "^[a-zA-Z ]{1,50}$" || message === "")
+  {
+    //console.log("If Part executing");
+    messageElement.style.borderColor = "#104c91";
+  }
+  else if(!message.text(message))   
+  {
+    messageElement.style.borderColor = "red";
+  }    
+  else{
+    messageElement.style.borderColor = "red"
+  }  
+
+}
+
+</script>
 <style>
   .CsureinfotechImg{
     width: 140px;
-  }
-  /* @charset "UTF-8"; */
+  } 
 </style>
 <body>
 
@@ -148,7 +232,6 @@ function changeStyle(){
               <h4 class="title"><a href="" class="stretched-link">Web Application</a></h4>
             </div>
           </div><!--End Icon Box -->
-
         </div>
       </div>
     </div>
@@ -245,7 +328,7 @@ function changeStyle(){
   </footer><!-- End Footer -->
   <!-- End Footer -->
 
-  <a href="#" class="scroll-top d-flex align-items-center justify-content-center mb-5 ml-5"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <div id="preloader"></div>
 

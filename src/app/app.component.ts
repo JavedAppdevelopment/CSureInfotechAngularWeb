@@ -19,23 +19,9 @@ export class AppComponent {
 
   constructor(private http:HttpClient) {}
 
-  APIFUN()
-  {
-    //this.getmethod();
+  APIFUN(){
     this.postmethod();
   }
-
-  /*
-  public getmethod()
-  {
-    this.http.get('https://jsonplaceholder.typicode.com/posts/1').subscribe((data) =>
-      {
-        console.log(data);
-        this.getJsonValue = data;
-      }
-    );
-  }
-  */
 
   public postmethod()
   {
@@ -52,11 +38,10 @@ export class AppComponent {
       }
     );
   }
-
-
-
+  
   submitted = false;
   name = "";
+  color = "";
   email = "";
   subject = "";
   message = "";
@@ -66,8 +51,6 @@ export class AppComponent {
   messageErrorMsg = "";
   body: any;
   snippet: any;
-  
-
 
   onClick(name: string , email: string, subject: string, message: string)
   {
@@ -97,16 +80,23 @@ export class AppComponent {
     //  API call code   //
     console.log("Call To API");
     
-    let body = { Name: name, Subject: subject, Email: email, Message: message };// passs
-    
-    this.http.post('https://localhost:7129/Mail/SendMail',body).subscribe((data) =>
-      {
-        console.log(data);
-        this.postJsonValue = data;
-        console.log("https://localhost:7129/Mail/SendMail api call completed : " + data)
-      }
-    );       
 
+    if((name == "" || name == null) && (email == "" || email == null) && (subject == "" || subject == null) && (message == "" || message == null))
+    {
+        console.log ("Not Valid " + name);
+    }
+    else
+    {
+      let body = { Name: name, Subject: subject, Email: email, Message: message };// passs
+    
+      this.http.post('https://localhost:7129/Mail/SendMail',body).subscribe((data) =>
+        {
+          console.log(data);
+          this.postJsonValue = data;
+          console.log("https://localhost:7129/Mail/SendMail api call completed : " + data)
+        }
+      );     
+    }
   }
 
   // Validation NameClickEvent //
@@ -124,7 +114,7 @@ export class AppComponent {
     else if(!pattern.test(name))
     {
       //console.log("Successfully Name");
-      this.nameErrorMsg = "Please enter proper name";
+      this.nameErrorMsg = "Please enter proper name";  
     }
     else{
       this.nameErrorMsg = "";

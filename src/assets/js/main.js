@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       let section = document.querySelector(navbarlink.hash);
       if (!section) return;
-
+      
       let position = window.scrollY + 200;
 
       if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     })
   }
-  window.addEventListener('load', navbarlinksActive);
+  //window.addEventListener('load', navbarlinksActive);
   document.addEventListener('scroll', navbarlinksActive);
 
   /**
@@ -166,24 +166,20 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     breakpoints: {
       320: {
-        slidesPerView: 3,
-        spaceBetween: 30
+        slidesPerView: 2,
+        spaceBetween: 40
       },
       480: {
-        slidesPerView: 6,
+        slidesPerView: 3,
         spaceBetween: 60
       },
       640: {
-        slidesPerView: 9,
-        spaceBetween: 90
+        slidesPerView: 4,
+        spaceBetween: 80
       },
       992: {
-        slidesPerView: 12,
+        slidesPerView: 6,
         spaceBetween: 120
-      },
-      1152: {
-        slidesPerView: 15,
-        spaceBetween: 150
       }
     }
   });
