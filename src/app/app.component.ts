@@ -4,6 +4,7 @@ import { FormControl, FormGroup} from '@angular/forms';
 import { APIServiceService } from './apiservice.service';
 import { Router } from '@angular/router';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { style } from '@angular/animations';
 
 
 @Component({
@@ -132,6 +133,7 @@ export class AppComponent {
     {
       //console.log("NotSuccessfully");
       this.emailErrorMsg = "Please enter your email";
+     // this.emailErrorMsg.classList.remove('myClass'); 
     }
     else if(!pattern.test(email))
     {
