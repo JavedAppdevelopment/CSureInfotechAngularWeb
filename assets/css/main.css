@@ -348,7 +348,6 @@ section {
   .navbar ul {
     margin: 0;
     padding: 0;
-
     display: flex;
     list-style: none;
     align-items: center;
@@ -396,6 +395,7 @@ section {
     visibility: hidden;
     width: 0px;
     transition: all 0.3s ease-in-out 0s;
+    /* background-color: red; */
   }
 
   .filter-active::before{
@@ -1048,13 +1048,14 @@ section {
 # Testimonials Section
 --------------------------------------------------------------*/
 .testimonials .testimonial-wrap {
-  padding-left: 10px; 
+  padding-left: 5px;  
+  height: 339px;
 }
 
 .testimonials .testimonial-item {
   box-sizing: content-box;
-  padding: 30px; 
-  margin: 30px 10px;  
+  padding: 30px;  
+  margin: 15px 10px;     
   box-shadow: 0px 0 15px rgba(0, 0, 0, 0.1);
   position: relative;
   /* background: yellow; */
@@ -1138,12 +1139,13 @@ section {
 
 @media (max-width: 767px) {
   .testimonials .testimonial-wrap {
-    padding-left: 0;
+    /* padding-left: 0; */
+    height: 370px;
   }
 
   .testimonials .testimonial-item {
-    padding: 30px;
-    margin: 15px;
+    padding: 15px;
+    /* margin: 15px; */
   }
 
   .testimonials .testimonial-item .testimonial-img {
@@ -1305,10 +1307,6 @@ section {
   .portfolio-details .swiper-button-prev,
   .portfolio-details .swiper-button-next {
     display: none;
-  }
-  .testimonial-item{
-    background-color: red;
-
   }
 }
 
