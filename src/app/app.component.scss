@@ -147,20 +147,27 @@ li {
     text-decoration: none;
 }
 .cool-link::after {
-    content: '';
+    /*content: '';
     display: block;
     width: 0px;
     height: 2px;
     transition: width .2s;
     transition: all 0.3s ease-in-out 0s;
     //margin-top: 3px;
-    border-bottom: 2px solid #104c91;
+    border-bottom: 2px solid #104c91;*/
 }
 .cool-link:hover::after {
+    content: "";
+    position: absolute;
     width: 100%;
-    color: #104c91;
-    border-right:2px;
-    right: 0;
+    height: 2px;
+    bottom: -6px;
+    left: 0;
+    background-color: #1f8ac0;
+    visibility: hidden;
+    width: 0px;
+    transition: all 0.3s ease-in-out 0s;
+    background-color: red;
 }
 
 
