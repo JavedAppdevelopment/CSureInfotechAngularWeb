@@ -962,22 +962,25 @@
                 <span>{{messageErrorMsg}}</span>
               </div>
               <div class="text-center">
-                <button type="button" class="btn w-100 SubmitButton" onclick="changeStyle()" (click)="onClick(name.value,email.value,subject.value,message.value)" onclick="myFunction()">Send Message</button>
+                <button type="button" class="btn w-100 SubmitButton" onclick="changeStyle()"  (click)="isEmailSet()" (click)="onClick(name.value,email.value,subject.value,message.value)" onclick="myFunction()">Send Message</button>
+                
               </div>
 
             </form> 
           </div><!-- End Contact Form -->
-         
-          <div class="info-item bg-success" style="margin-top: 20px;margin-bottom: -20px;display:none;" id="myDIV" [hidden]="!edited" class="alert alert-success box-msg" role="alert">
+          <ng-container >
+          <div class="info-item bg-primary" style="margin-top: 20px;margin-bottom: -20px;" *ngIf="visible" role="alert">
             <i class="bi bi-check-circle flex-shrink-0"></i> 
             <div><h4>Submitted.</h4><p>Thank you for contact-us we will call you back.</p></div>
           </div>  
+        </ng-container>
+          
+            
+       
 
         </div>
 
-        
-
       </div>
-    </section><!-- End Contact Form -->
+    </section><!-- End Contact Form id="myDIV"  -->
   </main><!-- End #main -->
   

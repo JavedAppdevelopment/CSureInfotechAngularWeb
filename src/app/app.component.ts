@@ -1,11 +1,7 @@
 import { Component} from '@angular/core';
-import { EmailService } from './email.service';
 import { FormControl, FormGroup} from '@angular/forms';
 import { APIServiceService } from './apiservice.service';
-import { Router } from '@angular/router';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { style } from '@angular/animations';
-import { ReturnStatement } from '@angular/compiler';
 
 
 @Component({
@@ -40,6 +36,7 @@ export class AppComponent {
       }
     );
   }
+
   
   submitted = false;
   name = "";
@@ -54,8 +51,20 @@ export class AppComponent {
   body: any;
   snippet: any;
 
+  ReadMore:boolean = true;
+  visible:boolean = false;
+
+  isEmailSet(){
+    this.ReadMore = !this.ReadMore; 
+    this.visible = !this.visible
+  }
+
+
   onClick(name: string , email: string, subject: string, message: string)
   {
+    
+    
+
     if(name == "" || name == null){
       this.nameErrorMsg = "Please enter your name";
     }
@@ -85,6 +94,8 @@ export class AppComponent {
     if((name == "" || name == null) && (email == "" || email == null) && (subject == "" || subject == null) && (message == "" || message == null))
     {
       console.log ("Invalid " + name);
+      this.ReadMore = !this.ReadMore; //not equal to condition
+      this.visible = !this.visible
     }
     else
     {
@@ -97,12 +108,16 @@ export class AppComponent {
           console.log("https://localhost:7129/Mail/SendMail api call completed : " + data);
           
           
-
+         
         }
         
 
       );   
     }
+
+    
+
+
   }
 
   // Validation NameClickEvent //
