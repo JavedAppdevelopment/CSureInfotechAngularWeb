@@ -133,12 +133,29 @@ function MessageFunction()
 
 }
 
-function alertFunction()
+function myFunction() 
 {
-  let SubmittedValible = document.getElementById("SubmittedValible");
-
-  SubmittedValible.classList.add("alertFunction")
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") 
+  {
+    x.style.display = "block";
+  } 
+  else
+  {
+    x.style.display = "none";
+  }
 }
+
+   /*if((name == "" || name == null) && (email == "" || email == null) && (subject == "" || subject == null) && (message == "" || message == null))
+  {
+    alert("Please enter Ensure you input a value in both fields!");
+  } 
+  else 
+  {
+    // perform operation with form input
+    alert("This form has been successfully submitted!");
+    console.log(`This form has a username of ${username.value} and password of ${password.value}`);
+  }*/
 
 </script>
 <style>
@@ -309,7 +326,7 @@ function alertFunction()
             <a href="https://www.linkedin.com/company/csure-infotech/" class="linkedin"><i class="bi bi-linkedin"></i></a>
             <a href="#" class="instagram"><i class="bi bi-facebook"></i></a>
           </div> -->
-        <div class="copyright container text-center m-0 mt-4">
+        <div class="copyright container text-center m-0 mt-3">
           &copy; Copyright <strong><span>CSure Infotech Pvt Ltd.</span></strong> All Rights Reserved.
         </div>
       </div>
@@ -350,3 +367,18 @@ function alertFunction()
 </body>
 
 </html> 
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My-react-app</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

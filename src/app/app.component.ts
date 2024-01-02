@@ -5,6 +5,7 @@ import { APIServiceService } from './apiservice.service';
 import { Router } from '@angular/router';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { style } from '@angular/animations';
+import { ReturnStatement } from '@angular/compiler';
 
 
 @Component({
@@ -66,7 +67,6 @@ export class AppComponent {
     }else {
       this.emailErrorMsg = "";
     }
-   
     if(subject == "" || subject == null){
       this.subjectErrorMsg = "Please enter your subject";
     }else{
@@ -77,26 +77,31 @@ export class AppComponent {
     }else{
       this.messageErrorMsg = "";
     }
+    
 
     //  API call code   //
     console.log("Call To API");
-    
 
     if((name == "" || name == null) && (email == "" || email == null) && (subject == "" || subject == null) && (message == "" || message == null))
     {
-        console.log ("Not Valid " + name);
+      console.log ("Invalid " + name);
     }
     else
     {
       let body = { Name: name, Subject: subject, Email: email, Message: message };// passs
     
-      this.http.post('https://localhost:7129/Mail/SendMail',body).subscribe((data) =>
+        var response = this.http.post('https://localhost:7129/Mail/SendMail',body).subscribe((data) =>
         {
-          console.log(data);
+          console.log("API call compeleted" + data);         
           this.postJsonValue = data;
-          console.log("https://localhost:7129/Mail/SendMail api call completed : " + data)
+          console.log("https://localhost:7129/Mail/SendMail api call completed : " + data);
+          
+          
+
         }
-      );     
+        
+
+      );   
     }
   }
 

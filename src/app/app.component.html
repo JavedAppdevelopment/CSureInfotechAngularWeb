@@ -945,70 +945,37 @@
             <form method="post" role="form" class="php-email-form" name="form1"> 
               <div class="row">
                 <div class="col-md-6 form-group text-danger">
-                  <input type="text" name="name" class="form-control AllContactDivColor" #name placeholder="Your Name*" id="name" required="required" (input)="NameClickEvent(name.value)" onkeypress="NameFunction();"/>
+                  <input type="text" name="name" class="form-control AllContactDivColor" style="border-radius: 10px;" #name placeholder="Your Name*" id="name" required="required" (input)="NameClickEvent(name.value)" onkeypress="NameFunction();"/>
                   <span>{{nameErrorMsg}}</span>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0 text-danger">
-                  <input type="email" class="form-control AllContactDivColor" name="email" #email placeholder="example@gmail.com" id="email"  pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" (input)="EmailClickEvent(email.value)" onkeypress="EmailFunction();"/>
+                  <input type="email" class="form-control AllContactDivColor" style="border-radius: 10px;" name="email" #email placeholder="example@gmail.com" id="email"  pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" (input)="EmailClickEvent(email.value)" onkeypress="EmailFunction();"/>
                   <span>{{emailErrorMsg}}</span>
                 </div>
               </div>
               <div class="form-group mt-3 text-danger">
-                <input type="text" class="form-control AllContactDivColor" name="subject" #subject placeholder="Your Subject*" id="subject"  (input)="SubjectClickEvent(subject.value)" onkeypress="SubjectFunction();"/>
+                <input type="text" class="form-control AllContactDivColor" style="border-radius: 10px;" name="subject" #subject placeholder="Your Subject*" id="subject"  (input)="SubjectClickEvent(subject.value)" onkeypress="SubjectFunction();"/>
                 <span>{{subjectErrorMsg}}</span>
               </div>
               <div class="form-group mt-3 text-danger">
-                <textarea class="form-control AllContactDivColor" name="message" rows="7" placeholder="Message*" #message id="message"  (input)="MessageClickEvent(message.value)" onkeypress="MessageFunction();"></textarea>
+                <textarea class="form-control AllContactDivColor" style="border-radius: 10px;" name="message" rows="7" placeholder="Message*" #message id="message"  (input)="MessageClickEvent(message.value)" onkeypress="MessageFunction();"></textarea>
                 <span>{{messageErrorMsg}}</span>
               </div>
               <div class="text-center">
-                <button type="button" class="btn btn-danger"  onclick="changeStyle()" (click)="onClick(name.value,email.value,subject.value,message.value)" hfre="#">Send Message</button>
-              </div>
-
-              <div class="row gx-lg-0 gy-4">
-                <div class="col-lg-4" style="width: 100%; margin-top: 30px;">   
-      
-                  <!-- <div class="info-container d-flex flex-column align-items-center justify-content-center"> -->
-                    <div class="info-item bg-success">
-                      <i class="bi bi-check-lg"></i>
-                      <div>
-                        <h4>Submitted.</h4>
-                        <p>Thank you for Feedback.</p>
-                      </div>
-                    </div><!-- End Info Item -->
-      
-                  <!-- </div> -->
-          
-                </div>
-            
-
-                <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                  <div class="toast-header">
-                    <img src="..." class="rounded mr-2" alt="...">
-                    <strong class="mr-auto">Bootstrap</strong>
-                    <small class="text-muted">11 mins ago</small>
-                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="toast-body">
-                    Hello, world! This is a toast message.
-                  </div>
-                </div>
-      
+                <button type="button" class="btn w-100 SubmitButton" onclick="changeStyle()" (click)="onClick(name.value,email.value,subject.value,message.value)" onclick="myFunction()">Send Message</button>
               </div>
 
             </form> 
           </div><!-- End Contact Form -->
-          <div class="bg-danger">
-            <div>
-
-            </div>
-          </div>
+         
+          <div class="info-item bg-success" style="margin-top: 20px;margin-bottom: -20px;display:none;" id="myDIV" [hidden]="!edited" class="alert alert-success box-msg" role="alert">
+            <i class="bi bi-check-circle flex-shrink-0"></i> 
+            <div><h4>Submitted.</h4><p>Thank you for contact-us we will call you back.</p></div>
+          </div>  
 
         </div>
 
-      
+        
 
       </div>
     </section><!-- End Contact Form -->
