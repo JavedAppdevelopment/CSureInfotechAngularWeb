@@ -134,7 +134,7 @@
                 <i class="bi bi-unity"></i>
               </div>
               <h3>Hybrid Application</h3>
-              <p>Cross Platform: In addition to native Android and iOS development, we also offer cross-platform solutions that can be deployed on multiple operating systems.</p>
+              <p>In addition to native Android and iOS development, we also offer cross-platform solutions that can be deployed on multiple operating systems.</p>
               <!-- <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a> -->
             </div>
           </div><!-- End Service Item -->
@@ -145,7 +145,7 @@
                 <i class="bi bi-android2"></i>
               </div>
               <h3>Android Application</h3>
-              <p>Android: We can build custom mobile applications for Android devices, utilizing the latest technologies and best practices to ensure a seamless user experience.</p>
+              <p>We can build custom mobile applications for Android devices, utilizing the latest technologies and best practices to ensure a seamless user experience.</p>
               <!-- <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a> -->
             </div>
           </div><!-- End Service Item -->
@@ -155,8 +155,8 @@
               <div class="icon">
                 <i class="bi bi-apple"></i>
               </div>
-              <h3>ISO Application</h3>
-              <p>iOS: Our developers have the skills and expertise to create high-quality mobile apps for iOS devices, including iPhones and iPads.</p>
+              <h3>iOS Application</h3>
+              <p>Our developers have the skills and expertise to create high-quality mobile apps for iOS devices, including iPhones and iPads.</p>
               <!-- <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a> -->
             </div>
           </div><!-- End Service Item -->
@@ -465,7 +465,7 @@
         <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order" data-aos="fade-up" data-aos-delay="100">
 
           <div>
-           
+            <nav id="navbar" class="navbar">
               <ul class="portfolio-flters">
                 <li data-filter="*" class="filter-active cool-link">All</li>
                 <li data-filter=".filter-app" class="cool-link">Android</li>
@@ -473,17 +473,7 @@
                 <li data-filter=".filter-branding" class="cool-link">Hybrid</li>
                 <li data-filter=".filter-books" class="cool-link">Tablet</li>
               </ul>
-           
-            
-            <!-- <nav class="navbar">
-              <ul class="portfolio-flters">
-                <li><a data-filter="*">Home</a></li>
-                <li ><a data-filter=".filter-app">About</a></li>
-                <li data-filter=".filter-product"><a>Services</a></li>
-                <li data-filter=".filter-branding"><a>Portfolio</a></li>
-                <li data-filter=".filter-books"><a>Contact</a></li>
-              </ul>
-            </nav> -->
+            </nav>
           </div>
 
           <div class="row gy-4 portfolio-container">
@@ -944,22 +934,22 @@
           <div class="col-lg-8 ContactFormDivMain">
             <form method="post" role="form" class="php-email-form" name="form1"> 
               <div class="row">
-                <div class="col-md-6 form-group text-danger">
+                <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control AllContactDivColor" style="border-radius: 10px;" #name placeholder="Your Name*" id="name" required="required" (input)="NameClickEvent(name.value)" onkeypress="NameFunction();"/>
-                  <span>{{nameErrorMsg}}</span>
+                  <span class="text-danger p-1">{{nameErrorMsg}}</span>
                 </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0 text-danger">
+                <div class="col-md-6 form-group mt-3 mt-md-0">
                   <input type="email" class="form-control AllContactDivColor" style="border-radius: 10px;" name="email" #email placeholder="example@gmail.com" id="email"  pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" (input)="EmailClickEvent(email.value)" onkeypress="EmailFunction();"/>
-                  <span>{{emailErrorMsg}}</span>
+                  <span class="text-danger p-1">{{emailErrorMsg}}</span>
                 </div>
               </div>
-              <div class="form-group mt-3 text-danger">
+              <div class="form-group mt-3">
                 <input type="text" class="form-control AllContactDivColor" style="border-radius: 10px;" name="subject" #subject placeholder="Your Subject*" id="subject"  (input)="SubjectClickEvent(subject.value)" onkeypress="SubjectFunction();"/>
-                <span>{{subjectErrorMsg}}</span>
+                <span class="text-danger p-1">{{subjectErrorMsg}}</span>
               </div>
-              <div class="form-group mt-3 text-danger">
+              <div class="form-group mt-3">
                 <textarea class="form-control AllContactDivColor" style="border-radius: 10px;" name="message" rows="7" placeholder="Message*" #message id="message"  (input)="MessageClickEvent(message.value)" onkeypress="MessageFunction();"></textarea>
-                <span>{{messageErrorMsg}}</span>
+                <span class="text-danger p-1">{{messageErrorMsg}}</span>
               </div>
               <div class="text-center">
                 <button type="button" class="btn w-100 SubmitButton" onclick="changeStyle()"  (click)="isEmailSet()" (click)="onClick(name.value,email.value,subject.value,message.value)" onclick="myFunction()">Send Message</button>
@@ -969,7 +959,7 @@
             </form> 
           </div><!-- End Contact Form -->
           <ng-container >
-          <div class="info-item bg-primary" style="margin-top: 20px;margin-bottom: -20px;" *ngIf="visible" role="alert">
+          <div class="info-item bg-success" style="margin-top: 20px;margin-bottom: -20px;" *ngIf="visible" role="alert">
             <i class="bi bi-check-circle flex-shrink-0"></i> 
             <div><h4>Submitted.</h4><p>Thank you for contact-us we will call you back.</p></div>
           </div>  

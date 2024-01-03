@@ -86,8 +86,9 @@ export class AppComponent {
 
     //  API call code   //
     console.log("Call To API");
+    
 
-    if((name == "" || name == null) && (email == "" || email == null) && (subject == "" || subject == null) && (message == "" || message == null))
+    if(name == "" || email == "" || subject == "" || message == "")
     {
       console.log ("Invalid " + name);
       this.ReadMore = !this.ReadMore; 
@@ -95,6 +96,8 @@ export class AppComponent {
     }
     else
     {
+      console.log ("Valid Successsfully...");
+
       let body = { Name: name, Subject: subject, Email: email, Message: message };// passs
     
         var response = this.http.post('https://localhost:7129/Mail/SendMail',body).subscribe((data) =>
@@ -103,7 +106,10 @@ export class AppComponent {
           this.postJsonValue = data;
           
           console.log("https://localhost:7129/Mail/SendMail api call completed : " + data);
-          
+    
+          //this.ReadMore = !this.ReadMore; 
+          //this.visible = !this.visible;
+
           
          
         }

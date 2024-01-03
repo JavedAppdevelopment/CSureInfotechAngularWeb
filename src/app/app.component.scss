@@ -134,7 +134,18 @@
 #message {
     border:2px solid #104c91;
 }
-
+.SubmitButton{
+    border-radius: 10px;
+    background-color: #104c91;
+    color: white;
+    margin: 10px;
+    margin-top: 10px;
+    margin-left: 1px;
+}
+.SubmitButton:hover{
+    background-color:#0369af;
+    color: white;
+}
 
 // LinkButton Class accessnew code //
 li {
@@ -153,7 +164,6 @@ li {
     height: 2px;
     transition: width .2s;
     transition: all 0.3s ease-in-out 0s;
-    //margin-top: 3px;
     border-bottom: 2px solid #104c91;
 }
 .cool-link:hover::after {
@@ -169,15 +179,7 @@ li {
     background-color: red;
 }
 
-.SubmitButton{
-    border-radius: 10px;
-    background-color: #104c91;
-    color: white;
-}
-.SubmitButton:hover{
-    background-color:#0369af;
-    color: white;
-}
+
 //new//
 
 
