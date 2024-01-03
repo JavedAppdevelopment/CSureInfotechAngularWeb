@@ -91,7 +91,7 @@ export class AppComponent {
     {
       console.log ("Invalid " + name);
       this.ReadMore = !this.ReadMore; 
-      this.visible = !this.visible
+      this.visible = !this.visible;
     }
     else
     {
@@ -101,6 +101,7 @@ export class AppComponent {
         {
           console.log("API call compeleted" + data);         
           this.postJsonValue = data;
+          
           console.log("https://localhost:7129/Mail/SendMail api call completed : " + data);
           
           
