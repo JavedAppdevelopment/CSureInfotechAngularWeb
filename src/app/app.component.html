@@ -464,17 +464,18 @@
 
         <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order" data-aos="fade-up" data-aos-delay="100">
 
-          <div>
-            <nav id="navbar" class="navbar">
+           <div>
+            <nav id="navbar">
               <ul class="portfolio-flters">
-                <li data-filter="*" class="filter-active cool-link">All</li>
+                <li data-filter="*" class="cool-link">All</li>
                 <li data-filter=".filter-app" class="cool-link">Android</li>
                 <li data-filter=".filter-product" class="cool-link">iOS</li>
                 <li data-filter=".filter-branding" class="cool-link">Hybrid</li>
                 <li data-filter=".filter-books" class="cool-link">Tablet</li>
               </ul>
             </nav>
-          </div>
+          </div> 
+          
 
           <div class="row gy-4 portfolio-container">
            
@@ -958,18 +959,28 @@
 
             </form> 
           </div><!-- End Contact Form -->
-          <ng-container >
-          <div class="info-item bg-success" style="margin-top: 20px;margin-bottom: -20px;" *ngIf="visible" role="alert">
-            <i class="bi bi-check-circle flex-shrink-0"></i> 
-            <div><h4>Submitted.</h4><p>Thank you for contact-us we will call you back.</p></div>
-          </div>  
-        </ng-container>
-          
-            
        
+          <ng-container>
+          <div class="info-item bg-success alert" style="margin-top: 20px;" role="alert" *ngIf="visible" id="demo">
+              <div>
+                <i class="bi bi-check-circle flex-shrink-0"></i> 
+                <h4>Submitted.<a href="#" style="margin-left: 85%;" class="close text-success text-white" data-dismiss="alert" aria-label="close">&times;</a></h4><p>Thank you for contact-us we will call you back.</p>
+              </div>
+          </div>
+        </ng-container> 
+        <!-- <ng-container>
+
+          <div class="" style="margin-top: 50px;">
+            <div class="alert bg-success text-white">
+              <i class="bi bi-check-circle flex-shrink-0 BTN rounded-circle"></i>
+              <strong style="margin-left: 15px;">Submitted.</strong><b><a href="#" style="" class="close text-success text-white" data-dismiss="alert" aria-label="close">&times;</a></b><p style="margin-left: 46px;">Thank you for contact-us we will call you back.</p>
+            </div>
+          <p style="display: none;"> The download will begin in <span id="countdowntimer">10 </span> Seconds</p> >  
+         </div>
+        </ng-container> -->
+        
 
         </div>
-
       </div>
     </section><!-- End Contact Form id="myDIV"  -->
   </main><!-- End #main -->

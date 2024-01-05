@@ -91,8 +91,21 @@ export class AppComponent {
     if(name == "" || email == "" || subject == "" || message == "")
     {
       console.log ("Invalid " + name);
+
+      
+
       this.ReadMore = !this.ReadMore; 
       this.visible = !this.visible;
+
+      var timeleft = 10;
+      var downloadTimer = setInterval(function()
+      {
+        //document.getElementById("demo").textContent = timeleft;
+
+        if(timeleft <= 0)
+            clearInterval(downloadTimer);
+      },1000);
+
     }
     else
     {
@@ -117,8 +130,6 @@ export class AppComponent {
 
       );   
     }
-
-    
 
 
   }
