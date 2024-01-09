@@ -2742,13 +2742,6 @@ section {
   margin-left: 220px;
 }
 
-.LinkColor{
-  color: #104c91;
-}
-.LinkColor:hover{
-  color: white;
-}
-
 .FooterDiv{
   margin-top: 5px;
 }
@@ -2768,6 +2761,13 @@ section {
 }
 .PhoneEmailMl{
   margin-left: 3px;
+}
+
+.LinkColor{
+  color: #104c91;
+}
+.LinkColor:hover{
+  color: white;
 }
 
 .topnav {
