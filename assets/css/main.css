@@ -314,8 +314,6 @@ section {
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
 }
 
-
-
 .header .logo h1 {
   font-size: 30px;
   margin: 0;
@@ -376,6 +374,7 @@ section {
     transition: 0.3s;
     position: relative;
   }
+
 
   .navbar a i,
   .navbar a:focus i {
@@ -1173,18 +1172,6 @@ section {
   margin: 0 10px;
   line-height: 1;
   transition: all 0.3s ease-in-out;
-  margin-bottom: 20px;
-  color: black;
-}
-
-.portfolio .portfolio-flters li:hover,
-.portfolio .portfolio-flters li.filter-active {
-  border-color: #104c91; 
-  visibility: visible;
-  width: 100%;
-  color: #104c91;
-  border-right:2px;
-  right: 0;
 }
 
 .portfolio .portfolio-flters li:first-child {
@@ -1221,7 +1208,6 @@ section {
   position: relative;
   border-top: 1px solid #f3f3f3;
   z-index: 2;
-  opacity: 0.9;
 }
 
 .portfolio .portfolio-wrap .portfolio-info h4 {
@@ -1303,7 +1289,6 @@ section {
 }
 
 @media (max-width: 575px) {
-
   .portfolio-details .swiper-button-prev,
   .portfolio-details .swiper-button-next {
     display: none;
@@ -2809,4 +2794,12 @@ section {
   border-bottom: 3px solid red;
 }
 
-
+.portfolio .portfolio-flters li:hover,
+.portfolio .portfolio-flters li.filter-active {
+  color: #104c91;
+  text-decoration-color:#104c91;
+  text-underline-offset: 0.4em;
+  text-decoration: underline 0.15em #104c91;
+  text-underline-offset: 0.3em;
+  transition: text-decoration-color 300ms, text-underline-offset 300ms;
+}
