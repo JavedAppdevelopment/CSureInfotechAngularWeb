@@ -464,17 +464,16 @@
 
         <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order" data-aos="fade-up" data-aos-delay="100">
 
-          <div>
-            <nav id="navbar" class="navbar">
-              <ul class="portfolio-flters">
-                <li data-filter="*" class="filter-active cool-link">All</li>
-                <li data-filter=".filter-app" class="cool-link">Android</li>
-                <li data-filter=".filter-product" class="cool-link">iOS</li>
-                <li data-filter=".filter-branding" class="cool-link">Hybrid</li>
-                <li data-filter=".filter-books" class="cool-link">Tablet</li>
-              </ul>
-            </nav>
+          <div style="margin-bottom: 15px;">
+            <ul class="portfolio-flters"  style="align-items: center;">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">Android</li>
+              <li data-filter=".filter-product">iOS</li>
+              <li data-filter=".filter-branding">Hybrid</li>
+              <li data-filter=".filter-books">Tablet</li>
+            </ul><!-- End Portfolio Filters -->
           </div>
+
 
           <div class="row gy-4 portfolio-container">
            
@@ -961,7 +960,7 @@
           <ng-container >
           <div class="info-item bg-success" style="margin-top: 20px;margin-bottom: -20px;" *ngIf="visible" role="alert">
             <i class="bi bi-check-circle flex-shrink-0"></i> 
-            <div><h4>Submitted.</h4><p>Thank you for contact-us we will call you back.</p></div>
+            <div><h4>Submitted.<a href="#" aria-hidden="true" style="margin-left: 1070px;" class="text-white">&times;</a></h4><p>Thank you for contact-us we will call you back.</p></div>
           </div>  
         </ng-container>
           

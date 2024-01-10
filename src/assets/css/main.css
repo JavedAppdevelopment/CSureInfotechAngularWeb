@@ -1179,12 +1179,9 @@ section {
 
 .portfolio .portfolio-flters li:hover,
 .portfolio .portfolio-flters li.filter-active {
-  border-color: #104c91; 
-  visibility: visible;
-  width: 100%;
   color: #104c91;
-  border-right:2px;
-  right: 0;
+  Text-decoration: underline 0.15em #104c91;  
+  Text-underline-offset: 0.4em;
 }
 
 .portfolio .portfolio-flters li:first-child {
