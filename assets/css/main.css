@@ -1177,11 +1177,8 @@ section {
 .portfolio .portfolio-flters li:hover,
 .portfolio .portfolio-flters li.filter-active {
   color: #104c91;
-  text-decoration-color:#104c91;
-  text-underline-offset: 0.4em;
-  text-decoration: underline 0.15em #104c91;
-  text-underline-offset: 0.4em;
-  transition: text-decoration-color 300ms, text-underline-offset 300ms;
+  text-decoration: underline 0.15em #104c91;  /* Add Text-UnderLine-Propeties */
+  text-underline-offset: 0.4em; 
 }
 
 .portfolio .portfolio-flters li:first-child {
