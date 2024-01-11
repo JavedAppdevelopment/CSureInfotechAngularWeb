@@ -91,6 +91,7 @@ export class AppComponent {
     if(name == "" || email == "" || subject == "" || message == "")
     {
       console.log ("Invalid " + name);
+
       this.ReadMore = !this.ReadMore; 
       this.visible = !this.visible;
     }
@@ -104,16 +105,23 @@ export class AppComponent {
         {
           console.log("API call compeleted" + data);         
           this.postJsonValue = data;
+
+          this.ReadMore = !this.ReadMore; 
+
+          setTimeout(() =>
+          {
+            console.log("SetTimeout Function Executed...");
+            this.visible = false;
+            
+          },10000);
+          
+          //console.log("setTimeout() example...");
           
           console.log("https://localhost:7129/Mail/SendMail api call completed : " + data);
     
           //this.ReadMore = !this.ReadMore; 
           //this.visible = !this.visible;
-
-          
-         
-        }
-        
+        }        
 
       );   
     }
@@ -207,5 +215,6 @@ export class AppComponent {
       this.messageErrorMsg = "";
     }
   }
+
 }
 

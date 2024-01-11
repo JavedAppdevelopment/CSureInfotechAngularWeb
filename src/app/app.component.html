@@ -954,22 +954,23 @@
                 <button type="button" class="btn w-100 SubmitButton" onclick="changeStyle()"  (click)="isEmailSet()" (click)="onClick(name.value,email.value,subject.value,message.value)" onclick="myFunction()">Send Message</button>
                 
               </div>
-
             </form> 
           </div><!-- End Contact Form -->
-          <ng-container >
-          <div class="info-item bg-success" style="margin-top: 20px;margin-bottom: -20px;" *ngIf="visible" role="alert">
-            <i class="bi bi-check-circle flex-shrink-0"></i> 
-            <div><h4>Submitted.<a href="#" aria-hidden="true" style="margin-left: 1070px;" class="text-white">&times;</a></h4><p>Thank you for contact-us we will call you back.</p></div>
-          </div>  
-        </ng-container>
           
+          
+          <div class="info-item d-flex bg-success DivContact" *ngIf="visible" role="alert" id="myDIV">
+            <i class="bi bi-check-circle flex-shrink-0"></i> 
+            <div>
+              <h4>Submitted.<a href="#" aria-hidden="true" style="margin-left: 1070px;" class="text-white">&times;</a></h4>
+              <p>Thank you for contact-us we will call you back.</p>
+            </div>
+          </div><!-- End Info Item -->
             
        
 
         </div>
 
       </div>
-    </section><!-- End Contact Form id="myDIV"  -->
+    </section><!-- End Contact Form -->
   </main><!-- End #main -->
   

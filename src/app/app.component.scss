@@ -179,6 +179,18 @@ li {
     background-color: red;
 }
 
+.DivContact 
+{
+    background-color: green;
+}
+
+@media screen and (max-width: 992px) {
+  .DivContact 
+  {
+    width: 97%;
+    margin-left: 10px;
+  }
+}
 
 //new//
 
