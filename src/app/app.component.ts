@@ -125,10 +125,6 @@ export class AppComponent {
 
       );   
     }
-
-    
-
-
   }
 
   // Validation NameClickEvent //
