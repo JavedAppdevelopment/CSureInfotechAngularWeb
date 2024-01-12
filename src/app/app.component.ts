@@ -15,7 +15,19 @@ export class AppComponent {
   public getJsonValue:any;
   public postJsonValue:any;
 
-  constructor(private http:HttpClient) {}
+  constructor(private http:HttpClient) 
+  {
+    console.log ("Reviws API Call...");
+
+    var response = this.http.get('https://localhost:7129/api/Data/Reviews').subscribe((data) =>   // Link ne update karvani
+    {
+      console.log("Reviws API call compeleted" + data);   
+
+      console.log("https://localhost:7129/api/Data/Reviews Reviws api call completed : " + data);
+
+    });       
+
+  }
 
   APIFUN(){
     this.postmethod();
@@ -90,6 +102,7 @@ export class AppComponent {
 
     if(name == "" || email == "" || subject == "" || message == "")
     {
+
       console.log ("Invalid " + name);
 
       this.ReadMore = !this.ReadMore; 
@@ -124,8 +137,6 @@ export class AppComponent {
       );   
     }
 
-    console.log("Method Call...");
-    
   }
 
   // Validation NameClickEvent //
