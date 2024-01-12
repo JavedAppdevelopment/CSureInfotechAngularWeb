@@ -103,18 +103,16 @@ export class AppComponent {
     
         var response = this.http.post('https://localhost:7129/Mail/SendMail',body).subscribe((data) =>
         {
-          console.log("API call compeleted" + data);         
-          this.postJsonValue = data;
+          console.log("API call compeleted" + data);      
 
+          this.postJsonValue = data;
           this.ReadMore = !this.ReadMore; 
 
           setTimeout(() =>
           {
             console.log("SetTimeout Function Executed...");
             this.visible = false;
-            
-          },10000);
-          
+          },10000);     
           //console.log("setTimeout() example...");
           
           console.log("https://localhost:7129/Mail/SendMail api call completed : " + data);
@@ -125,6 +123,9 @@ export class AppComponent {
 
       );   
     }
+
+    console.log("Method Call...");
+    
   }
 
   // Validation NameClickEvent //
