@@ -117,7 +117,6 @@
       </div>
     </section><!-- End Stats Counter Section -->
 
-    
     <!-- ======= Our Services Section ======= -->
     <section id="services" class="services sections-bg">
       <div class="container" data-aos="fade-up">
@@ -212,24 +211,26 @@
         <div class="slides-3 swiper" style="height:430px">
           <div class="swiper-wrapper">
             
-            <div class="swiper-slide">
+            <div class="swiper-slide"  *ngFor="let Obj_Name of reviewList">
               <div class="testimonial-wrap">
+
                 <div class="testimonial-item">
                   <div class="d-flex align-items-center">
                     <div>
-                      <h3>Kevin Bruno</h3>
-                      <h4 class="text-primary">KB Render Corporation</h4>
+                      <h3> {{ Obj_Name.Name }} </h3>
+                      <h4 class="text-primary">{{ Obj_Name.Title }}</h4>
                       <div class="stars">
                         <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                       </div>
                     </div>
                   </div>
                   <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    CSure team always manage to get the work done and goes above / beyond my satisfaction!I already have him working on my next job!  If you want it done, done well, and for a great price, Hire this Developer.
+                    <i class="bi bi-quote quote-icon-left"></i>{{ Obj_Name.Msg }}
+                    <!-- CSure team always manage to get the work done and goes above / beyond my satisfaction!I already have him working on my next job!  If you want it done, done well, and for a great price, Hire this Developer. -->
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
                 </div>
+
               </div> 
             </div><!-- End testimonial item Jorge Mauricio Teymeny da Silva -->
 

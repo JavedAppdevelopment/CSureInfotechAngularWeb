@@ -9,11 +9,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 }) 
+
+
 export class AppComponent {
   title = 'Csureinfotech3';
   
   public getJsonValue:any;
   public postJsonValue:any;
+  public reviewList:any; // API Data Varible
 
   constructor(private http:HttpClient) 
   {
@@ -22,6 +25,9 @@ export class AppComponent {
     var response = this.http.get('https://localhost:7129/api/Data/Reviews').subscribe((data) =>   // Link ne update karvani
     {
       console.log("Reviws API call compeleted" + data);   
+
+      this.reviewList = data; // API Data Send -> Website
+      console.log(this.reviewList); // API Data Send -> Website
 
       console.log("https://localhost:7129/api/Data/Reviews Reviws api call completed : " + data);
 
@@ -225,4 +231,5 @@ export class AppComponent {
   }
 
 }
+
 
