@@ -1004,7 +1004,7 @@ section {
   content: "";
   height: 100%;
   width: 100%;
-  background: white;
+  background: white; 
   border-radius: 50px;
   z-index: 1;
   top: 5px;

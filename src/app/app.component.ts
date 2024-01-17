@@ -16,7 +16,7 @@ export class AppComponent {
   
   public getJsonValue:any;
   public postJsonValue:any;
-  public reviewList:any; // API Data Varible
+  public ReviewList:any; // API Data Varible
 
   constructor(private http:HttpClient) 
   {
@@ -26,13 +26,13 @@ export class AppComponent {
     {
       console.log("Reviws API call compeleted" + data);   
 
-      this.reviewList = data; // API Data Send -> Website
-      console.log(this.reviewList); // API Data Send -> Website
+      this.ReviewList = data; // API Data Send -> Website
+      console.log(this.ReviewList ); // API Data Send -> Website
 
       console.log("https://localhost:7129/api/Data/Reviews Reviws api call completed : " + data);
 
     });       
-
+    
   }
 
   APIFUN(){

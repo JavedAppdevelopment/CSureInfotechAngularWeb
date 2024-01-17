@@ -209,24 +209,24 @@
         </div>
 
         <div class="slides-3 swiper" style="height:430px">
-          <div class="swiper-wrapper">
+          <div class="swiper-wrapper" *ngFor="let review of ReviewList">
             
-            <div class="swiper-slide"  *ngFor="let Obj_Name of reviewList">
+            <div class="swiper-slide">
               <div class="testimonial-wrap">
 
                 <div class="testimonial-item">
                   <div class="d-flex align-items-center">
                     <div>
-                      <h3> {{ Obj_Name.Name }} </h3>
-                      <h4 class="text-primary">{{ Obj_Name.Title }}</h4>
+                      <h3> {{ review.name }} </h3>
+                      <h4 class="text-primary">{{ review.title }}</h4>
                       <div class="stars">
                         <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                       </div>
                     </div>
                   </div>
                   <p>
-                    <i class="bi bi-quote quote-icon-left"></i>{{ Obj_Name.Msg }}
-                    <!-- CSure team always manage to get the work done and goes above / beyond my satisfaction!I already have him working on my next job!  If you want it done, done well, and for a great price, Hire this Developer. -->
+                    <i class="bi bi-quote quote-icon-left"></i>
+                      {{ review.msg }}
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
                 </div>
@@ -239,8 +239,8 @@
                 <div class="testimonial-item">
                   <div class="d-flex align-items-center">
                     <div>
-                      <h3>Jorge Mauricio Teymeny da Silva</h3>
-                      <h4 class="text-primary">-</h4>
+                      <h3>{{ review.name }}</h3>
+                      <h4 class="text-primary">{{ review.title }}</h4>
                       <div class="stars">
                         <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                       </div>
@@ -248,7 +248,7 @@
                   </div>
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
-                    As usual, CSure Team was available right away to help me proceed with my development. And even gave me some extra help to make sure the task was done correctly.
+                    {{ review.msg }}
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
                 </div>
@@ -260,8 +260,8 @@
                 <div class="testimonial-item">
                   <div class="d-flex align-items-center">
                     <div>
-                      <h3>Yugandar K</h3>
-                      <h4 class="text-primary">-</h4>
+                      <h3>{{ review.name }}</h3>
+                      <h4 class="text-primary">{{ review.title }}</h4>
                       <div class="stars">
                         <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                       </div>
@@ -269,7 +269,7 @@
                   </div>
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
-                    CSure was GREAT Team!!!  Great programmers, good communication. They fit right in with the team!.
+                    {{ review.msg }}
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
                 </div>
@@ -281,8 +281,8 @@
                 <div class="testimonial-item">
                   <div class="d-flex align-items-center">
                     <div>
-                      <h3>Patrick Wensel</h3>
-                      <h4 class="text-primary">CEO-PPG Services</h4>
+                      <h3>{{ review.name }}</h3>
+                      <h4 class="text-primary">{{ review.title }}</h4>
                       <div class="stars">
                         <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                       </div>
@@ -290,7 +290,7 @@
                   </div>
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
-                    CSure was GREAT Team!!!  Great programmers, good communication. They fit right in with the team!.
+                    {{ review.msg }}
                      <i class="bi bi-quote quote-icon-right"></i>
                   </p>
                 </div>
@@ -302,8 +302,8 @@
                 <div class="testimonial-item">
                   <div class="d-flex align-items-center">
                     <div>
-                      <h3>Adam Morrison</h3>
-                      <h4 class="text-primary">FASTTRACK Technologies</h4>
+                      <h3>{{ review.name }}</h3>
+                      <h4 class="text-primary">{{ review.title }}</h4>
                       <div class="stars">
                         <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                       </div>
@@ -311,7 +311,7 @@
                   </div>
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
-                    CSure  team is a quick, to the point, figure it out type of team. Worked through Xamarin upgrade and breaking change issues with a Xamarin Forms 2.3 legacy application. Response time and availability is great.
+                    {{ review.msg }}
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
                 </div>
@@ -323,16 +323,16 @@
                 <div class="testimonial-item">
                   <div class="d-flex align-items-center">
                     <div>
-                      <h3>Max Burga</h3>
-                      <h4 class="text-primary">-</h4>
+                      <h3>{{ review.name }}</h3>
+                      <h4 class="text-primary">{{ review.title }}</h4>
                       <div class="stars">
                         <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                       </div>
                     </div>
                   </div>
                   <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    After looking for many other developers I got the lucky to meet Cure team. They did a great job and we were in contact all the time and finally finished the job successfully. 100% recommended.
+                    <i class="bi bi-quote quote-icon-left"></i>  
+                    {{ review.msg }}
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
                 </div>
@@ -344,16 +344,16 @@
                 <div class="testimonial-item">
                   <div class="d-flex align-items-center">
                     <div>
-                      <h3>Glenn Coleman</h3>
-                      <h4 class="text-primary">-</h4>
+                      <h3>{{ review.name }}</h3>
+                      <h4 class="text-primary">{{ review.title }}</h4>
                       <div class="stars">
                         <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                       </div>
                     </div>
                   </div>
                   <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                     Great worker/Team, very knowledgeable.Sure Infotech clearly has industry-strength experience in mobile development and Xamarin.
+                    <i class="bi bi-quote quote-icon-left"></i>  
+                    {{ review.msg }}
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
                 </div>
@@ -365,8 +365,8 @@
                 <div class="testimonial-item">
                   <div class="d-flex align-items-center">
                     <div>
-                      <h3>Mikhail Balagosa</h3>
-                      <h4 class="text-primary">-</h4>
+                      <h3>{{ review.name }}</h3>
+                      <h4 class="text-primary">{{ review.title }}</h4>
                       <div class="stars">
                         <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                       </div>
@@ -374,7 +374,7 @@
                   </div>
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
-                    CSure is the best among previous developer working on this project. From all the previous developer CSure was the only one who is able to complete it. Very excellent in what they do.
+                    {{ review.msg }}
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
                 </div>
@@ -386,8 +386,8 @@
                 <div class="testimonial-item">
                   <div class="d-flex align-items-center">
                     <div>
-                      <h3>Bill Greer</h3>
-                      <h4 class="text-primary">-</h4>
+                      <h3>{{ review.name }}</h3>
+                      <h4 class="text-primary">{{ review.title }}</h4>
                       <div class="stars">
                         <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                       </div>
@@ -395,7 +395,7 @@
                   </div>
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
-                    CSure Team went above and beyond my expectations. They used Their extensive knowledge to suggest solutions that I was not even aware of.  I am very impressed with CSure Team’s Xamarin skills and ability to manage the project at hand.
+                    {{ review.msg }}
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
                 </div>
@@ -407,8 +407,8 @@
                 <div class="testimonial-item">
                   <div class="d-flex align-items-center">
                     <div>
-                      <h3>Kevin McCallum</h3>
-                      <h4 class="text-primary">-</h4>
+                      <h3>{{ review.name }}</h3>
+                      <h4 class="text-primary">{{ review.title }}</h4>
                       <div class="stars">
                         <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
                       </div>
@@ -416,7 +416,7 @@
                   </div>
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
-                    CSure Team did a great job working with our Xamarin project.  The project was kind of a mess before They took over and they did a great job cleaning it up and enhancing the code. CSure Team knows Xamarin really well and is excellent at creating pixel-perfect XAML when given the designs.  I would definitely work with CSure Team again in the future. 
+                    {{ review.msg }}
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
                 </div>
@@ -428,8 +428,8 @@
                 <div class="testimonial-item">
                   <div class="d-flex align-items-center">
                     <div>
-                      <h3>Solace Aftab</h3>
-                      <h4 class="text-primary">-</h4>
+                      <h3>{{ review.name }}</h3>
+                      <h4 class="text-primary">{{ review.title }}</h4>
                       <div class="stars">
                         <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                       </div>
@@ -437,8 +437,7 @@
                   </div>
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
-                    CSure Team was fantastic!
-                    they were very helpful with everything I needed and his efficiency in delivering the product was excellent.I also found communication with team is high co-operative and timely. Will use again in the future.
+                    {{ review.msg }}
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
                 </div>
@@ -447,7 +446,6 @@
 
           </div>
         </div>
-
         <div class="swiper-pagination text-primary"></div>
 
       </div>
