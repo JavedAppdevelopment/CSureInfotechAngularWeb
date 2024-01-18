@@ -1004,7 +1004,7 @@ section {
   content: "";
   height: 100%;
   width: 100%;
-  background: white;
+  background: white; 
   border-radius: 50px;
   z-index: 1;
   top: 5px;
@@ -1717,7 +1717,7 @@ section {
   padding: 0 40px 30px 45px;
   border: 0;
   border-radius: 10px;
-  background: #fff;
+  background: #efc9af;
   box-shadow: none;
 }
 
