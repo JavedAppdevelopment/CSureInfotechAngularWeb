@@ -1048,8 +1048,14 @@ section {
 # Testimonials Section
 --------------------------------------------------------------*/
 .testimonials .testimonial-wrap {
-  padding-left: 5px;  
-  height: 339px;
+  padding-left: 15px;  
+  background: #f6f6f6;
+  border-radius: 10px;
+  height: 380px;
+  margin: 10px; 
+  box-sizing: content-box;
+  border-radius: 15px;
+
 }
 
 .testimonials .testimonial-item {
@@ -1058,12 +1064,11 @@ section {
   margin: 15px 10px;     
   box-shadow: 0px 0 15px rgba(0, 0, 0, 0.1);
   position: relative;
-  /* background: yellow; */
+  background: yellow; 
   height: 100%;
-  /* overflow-y: hidden; */
-  flex: auto;
-  /* display: contents; */
-  max-height: max-content;    
+  overflow-y: hidden; 
+  flex: auto; 
+display: contents; 
   border-radius: 10px;
 }
 
@@ -1717,7 +1722,7 @@ section {
   padding: 0 40px 30px 45px;
   border: 0;
   border-radius: 10px;
-  background: #efc9af;
+  background: white;
   box-shadow: none;
 }
 
