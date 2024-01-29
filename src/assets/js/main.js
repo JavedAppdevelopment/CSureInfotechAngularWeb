@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
     speed: 400,
     loop: true,
     autoplay: {
-      delay: 7000,
+      delay: 5000,
       disableOnInteraction: false
     },
     slidesPerView: 'auto',
@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /**
    * Init swiper slider with 1 slide at once in desktop view
    */
-  /*new Swiper('.slides-1', {
+  new Swiper('.slides-1', {
     speed: 600,
     loop: true,
     autoplay: {
@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     }
-  });*/
+  });
 
   /**
    * Init swiper slider with 3 slides at once in desktop view // MISTAKE
@@ -216,7 +216,6 @@ document.addEventListener('DOMContentLoaded', () => {
       delay: 5000,
       disableOnInteraction: false
     },
-    
     slidesPerView: 3,
     slidesPerGroup: 3,
     spaceBetween: 15,
@@ -230,13 +229,12 @@ document.addEventListener('DOMContentLoaded', () => {
       prevEl: '.swiper-button-prev-3',
     },
     breakpoints: {
-      320: {
+      320:{
         slidesPerView: 1,
         slidesPerGroup:1,
         spaceBetween: 40
       },
-
-      1200: {
+      1200:{
         slidesPerView: 3
       }
     }
@@ -295,3 +293,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+
+

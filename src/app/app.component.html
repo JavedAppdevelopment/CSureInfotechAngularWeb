@@ -198,96 +198,26 @@
 
       </div>
     </section><!-- End Our Services Section -->
-
-    <!-- ======= Testimonials Section ======= -->
+    
+      <!-- ======= testimonials Section ======= -->
     <section id="testimonials" class="testimonials">
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
           <h2>Testimonials</h2>
-          <p>Here is something, what our clients said about us...</p>
+          <p>Voluptatem quibusdam ut ullam perferendis repellat non ut consequuntur est eveniet deleniti fignissimos eos quam</p>
         </div>
 
-        <div class="slides-3 swiper bg-danger" style="height:430px">
-          <div class="swiper-wrapper">
-            
-              <div class="swiper-slide bg-success" *ngFor="let review of ReviewList">
-                <div class="testimonial-wrap">
+        <div class="slides-3 swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper" >
 
-                  <div class="testimonial-item bg-danger">
-                    <div class="d-flex align-items-center">
-                      <div>
-                        <h3> {{ review.name }} </h3>
-                        <h4 class="text-primary"> {{ review.title }} </h4>
-                        <div class="stars">
-                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                        </div>
-                      </div>
-                    </div>
-                    <p>
-                      <i class="bi bi-quote quote-icon-left"></i>
-                      {{ review.msg }}
-                      <i class="bi bi-quote quote-icon-right"></i>
-                    </p>
-
-                  </div>
-
-                  
-
-                </div> 
-              </div><!-- End testimonial item Jorge Mauricio Teymeny da Silva *ngFor="let review of ReviewList" -->
-
-              <div class="swiper-slide bg-success" *ngFor="let review2 of ReviewList">
-                <div class="testimonial-wrap">
-                  <div class="testimonial-item bg-danger">
-                    <div class="d-flex align-items-center">
-                      <div>
-                        <h3> {{ review2.name }} </h3>
-                        <h4 class="text-primary"> {{ review2.title }} </h4>
-                        <div class="stars">
-                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                        </div>
-                      </div>
-                    </div>
-                    <p>
-                      <i class="bi bi-quote quote-icon-left"></i>
-                      {{ review2.msg }}
-                      <i class="bi bi-quote quote-icon-right"></i>
-                    </p>
-                  </div>
-                </div>
-              </div><!-- End testimonial item Jorge Mauricio Teymeny da Silva -->
-
-              <div class="swiper-slide bg-success">
-                <div class="testimonial-wrap">
-                  <div class="testimonial-item">
-                    <div class="d-flex align-items-center">
-                      <div>
-                        <h3> </h3>
-                        <h4 class="text-primary"> </h4>
-                        <div class="stars">
-                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                        </div>
-                      </div>
-                    </div>
-                    <p>
-                      <i class="bi bi-quote quote-icon-left"></i>
-                    
-                      <i class="bi bi-quote quote-icon-right"></i>
-                    </p>
-                  </div>
-                </div>
-              </div><!-- End testimonial item Yugandar -->
-
-          
-
-            <div class="swiper-slide">
+            <div class="swiper-slide" *ngFor="let review of ReviewList">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
                   <div class="d-flex align-items-center">
                     <div>
-                      <h3></h3>
-                      <h4 class="text-primary"></h4>
+                      <h3>{{review.name}}</h3>
+                      <h4 class="text-primary">{{review.title}}</h4>
                       <div class="stars">
                         <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                       </div>
@@ -295,163 +225,16 @@
                   </div>
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
-                   
-                     <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
-                </div>
-              </div>
-            </div><!-- End testimonial item Patrick Wensel-->
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <div class="d-flex align-items-center">
-                    <div>
-                      <h3></h3>
-                      <h4 class="text-primary"></h4>
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                  
+                    {{review.msg}}
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
                 </div>
               </div>
-            </div><!-- End testimonial item Adam Morrison -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <div class="d-flex align-items-center">
-                    <div>
-                      <h3></h3>
-                      <h4 class="text-primary"></h4>
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>  
-          
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
-                </div>
-              </div>
-            </div><!-- End testimonial item Max Burga-->
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <div class="d-flex align-items-center">
-                    <div>
-                      <h3></h3>
-                      <h4 class="text-primary"></h4>
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>  
-                   
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
-                </div>
-              </div>
-            </div><!-- End testimonial item Glenn Coleman -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <div class="d-flex align-items-center">
-                    <div>
-                      <h3></h3>
-                      <h4 class="text-primary"></h4>
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
-                </div>
-              </div>
-            </div><!-- End testimonial item Mikhail Balagosa -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <div class="d-flex align-items-center">
-                    <div>
-                      <h3></h3>
-                      <h4 class="text-primary"></h4>
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-               
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
-                </div>
-              </div>
-            </div><!-- End testimonial item Bill Greer -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <div class="d-flex align-items-center">
-                    <div>
-                      <h3></h3>
-                      <h4 class="text-primary"></h4>
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                   
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
-                </div>
-              </div>
-            </div><!-- End testimonial item Kevin McCallum -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <div class="d-flex align-items-center">
-                    <div>
-                      <h3></h3>
-                      <h4 class="text-primary"></h4>
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                  
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
-                </div>
-              </div>
-            </div><!-- End testimonial item Solace Aftab -->
+            </div><!-- End testimonial item -->
 
           </div>
+          <div class="swiper-pagination"></div>
         </div>
-        <div class="swiper-pagination text-primary"></div>
 
       </div>
     </section><!-- End Testimonials Section -->
@@ -939,7 +722,7 @@
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control AllContactDivColor" style="border-radius: 10px;" #name placeholder="Your Name*" id="name" required="required" (input)="NameClickEvent(name.value)" onkeypress="NameFunction();"/>
-                  <span class="text-danger p-1">{{nameErrorMsg}}</span>
+                  <span class="text-danger p-1">{{ nameErrorMsg }}</span>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
                   <input type="email" class="form-control AllContactDivColor" style="border-radius: 10px;" name="email" #email placeholder="example@gmail.com" id="email"  pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" (input)="EmailClickEvent(email.value)" onkeypress="EmailFunction();"/>
@@ -956,7 +739,6 @@
               </div>
               <div class="text-center">
                 <button type="button" class="btn w-100 SubmitButton" onclick="changeStyle()"  (click)="isEmailSet()" (click)="onClick(name.value,email.value,subject.value,message.value)" onclick="myFunction()">Send Message</button>
-                
               </div>
             </form> 
           </div><!-- End Contact Form -->

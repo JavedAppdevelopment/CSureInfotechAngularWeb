@@ -13,10 +13,11 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 export class AppComponent {
   title = 'Csureinfotech3';
-  
   public getJsonValue:any;
   public postJsonValue:any;
-  public ReviewList:any; // API Data Varible
+  public ReviewList:any; // API Reviws Data Varible
+  public PortfolioList:any; // API Portfolio Data Varible
+
 
   constructor(private http:HttpClient) 
   {
@@ -26,12 +27,26 @@ export class AppComponent {
     {
       console.log("Reviws API call compeleted" + data);   
 
-      this.ReviewList = data; // API Data Send -> Website
-      console.log(this.ReviewList ); // API Data Send -> Website
+      this.ReviewList = data; // API Reviws Data Send -> Website
+      console.log(this.ReviewList ); // API Reviws Data Send -> Website
 
       console.log("https://localhost:7129/api/Data/Reviews Reviws api call completed : " + data);
 
     });       
+
+    console.log("PortfolioModel API Call...");
+
+    var var_name =this.http.get('https://localhost:7129/api/DataPortfolio/Portfolio').subscribe((data)=> // Link ne update karvani
+    {
+
+      console.log("Reviws API call compeleted" + data);  
+
+      this.PortfolioList = data; // API Portfolio Data Send -> Website
+      console.log(this.PortfolioList ); // API Portfolio Data Send -> Website
+
+      console.log("https://localhost:7129/api/DataPortfolio/Portfolio Portfolio api call completed : " + data);
+
+    });
     
   }
 
@@ -108,7 +123,6 @@ export class AppComponent {
 
     if(name == "" || email == "" || subject == "" || message == "")
     {
-
       console.log ("Invalid " + name);
 
       this.ReadMore = !this.ReadMore; 
