@@ -1048,14 +1048,14 @@ section {
 # Testimonials Section
 --------------------------------------------------------------*/
 .testimonials .testimonial-wrap {
-  padding-left: 15px;  
-  background: #f6f6f6;
-  border-radius: 10px;
-  height: 380px;
+  height: 350px;
   margin: 10px; 
   box-sizing: content-box;
   border-radius: 15px;
-
+  padding: 30px 30px 0 30px;
+  position: relative;
+  background-color: #f6f6f6;
+  margin-bottom: 50px;
 }
 
 .testimonials .testimonial-item {
@@ -1064,7 +1064,7 @@ section {
   margin: 15px 10px;     
   box-shadow: 0px 0 15px rgba(0, 0, 0, 0.1);
   position: relative;
-  background: yellow; 
+  background-color: yellow; 
   height: 100%;
   overflow-y: hidden; 
   flex: auto; 
@@ -1076,6 +1076,7 @@ display: contents;
   width: 90px;
   border-radius: 50px;
   margin-right: 15px;
+  
 }
 
 .testimonials .testimonial-item h3 {
