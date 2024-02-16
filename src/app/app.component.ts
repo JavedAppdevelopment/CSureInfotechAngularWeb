@@ -100,11 +100,11 @@ export class AppComponent {
     else{
       this.nameErrorMsg = " ";
     }
-    if(email == "null" || email == ""){
+    /*if(email == "null" || email == "" || email == "[a-z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"){
       this.emailErrorMsg = "Please enter your email";
     }else {
       this.emailErrorMsg = "";
-    }
+    }*/
     if(subject == "" || subject == null){
       this.subjectErrorMsg = "Please enter your subject";
     }else{
@@ -127,12 +127,51 @@ export class AppComponent {
 
       this.ReadMore = !this.ReadMore; 
       this.visible = !this.visible;
+
+      //Name Validation;
+      var pattern = new RegExp("^[a-zA-Z ]{1,}$");
+
+      if(name == "")
+      {
+        //console.log("NotSuccessfully");
+        this.nameErrorMsg = "Please enter your name";
+      }
+      else if(!pattern.test(name))
+      {
+        //console.log("Successfully Name");
+        this.nameErrorMsg = "Please enter proper name";  
+      }
+      else{
+        this.nameErrorMsg = "";
+      }
+``
+      //Email Validation;
+      var pattern = new RegExp("^[a-z0-9]+@[a-z]+\.[a-z]{2,4}$");
+
+      console.log("Value : "+ pattern);
+
+      if(email == "")
+      {
+        console.log("NotSuccessfully");
+        this.emailErrorMsg = "Please enter your email";
+        // this.emailErrorMsg.classList.remove('myClass'); 
+      }
+      else if(!pattern.test(email))
+      {
+        //console.log("Successfully Email Address");
+        this.emailErrorMsg = "Please enter proper email";
+      }
+      else
+      {
+        this.emailErrorMsg = "";
+      }
+
     }
     else
     {
       console.log ("Valid Successsfully...");
 
-      let body = { Name: name, Subject: subject, Email: email, Message: message };// passs
+      let body = { Name: name, Subject: subject, Email: email, Message: message }; // passs
     
         var response = this.http.post('https://localhost:7129/Mail/SendMail',body).subscribe((data) =>
         {
@@ -143,7 +182,7 @@ export class AppComponent {
 
           setTimeout(() =>
           {
-            console.log("SetTimeout Function Executed...");
+            //console.log("SetTimeout Function Executed...");
             this.visible = false;
           },10000);     
           //console.log("setTimeout() example...");
@@ -162,23 +201,23 @@ export class AppComponent {
   // Validation NameClickEvent //
   NameClickEvent(name: string)
   {
-    console.log("name :" + name);
+    //console.log("name :" + name);
     //pc code start
-    var pattern = new RegExp("^[a-zA-Z ]{1,}$");
+    //var pattern = new RegExp("^[a-zA-Z ]{1,}$");
 
-    if(name == "")
-    {
+    //if(name == "")
+    //{
       //console.log("NotSuccessfully");
-      this.nameErrorMsg = "Please enter your name";
-    }
-    else if(!pattern.test(name))
-    {
+      //this.nameErrorMsg = "Please enter your name";
+    //}
+    //else if(!pattern.test(name))
+    //{
       //console.log("Successfully Name");
-      this.nameErrorMsg = "Please enter proper name";  
-    }
-    else{
-      this.nameErrorMsg = "";
-    }
+      //this.nameErrorMsg = "Please enter proper name";  
+    //}
+    //else{
+      //this.nameErrorMsg = "";
+    //}
   }
 
   // Validation EmailClickEvent //
@@ -186,23 +225,23 @@ export class AppComponent {
   {
     //console.log("email :"  + email);
     //hitesh code start
-    var pattern = new RegExp("^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$");
+    //var pattern = new RegExp("^[a-z0-9]+@[a-z]+\.[a-z]{2,6}$");
 
-    if(email == "")
-    {
+    //if(email == "")
+    //{
       //console.log("NotSuccessfully");
-      this.emailErrorMsg = "Please enter your email";
+      //this.emailErrorMsg = "Please enter your email";
      // this.emailErrorMsg.classList.remove('myClass'); 
-    }
-    else if(!pattern.test(email))
-    {
+    //}
+    //else if(!pattern.test(email))
+    //{
       //console.log("Successfully Email Address");
-      this.emailErrorMsg = "Please enter proper email";
-    }
-    else{
-      this.emailErrorMsg = "";
+     // this.emailErrorMsg = "Please enter proper email";
+    //}
+    //else{
+     // this.emailErrorMsg = "";
       
-    }
+    //}
   }
 
   // Validation SubjectClickEvent //
@@ -210,15 +249,15 @@ export class AppComponent {
   {
     //console.log("subject :"  + subject);
 
-    //hitesh code start
-    var pattern = new RegExp("^[a-zA-Z ]{1,20}$");
+    var pattern = new RegExp("^[a-zA-Z]+''{1,20}$");
+    
     if(subject == "")
     {
       this.subjectErrorMsg= "Please enter your subject";
     }
     else if(!pattern.test(subject))
     {
-      this.subjectErrorMsg = "Please enter your subject";
+      this.subjectErrorMsg = "";
     }
     else{
       this.subjectErrorMsg = "";
@@ -237,7 +276,7 @@ export class AppComponent {
     }
     else if(!pattern.test(message))
     {
-      this.messageErrorMsg = "Please enter your message";
+      this.messageErrorMsg = ""; // Please enter your message
     }
     else{
       this.messageErrorMsg = "";
