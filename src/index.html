@@ -73,21 +73,22 @@ function NameFunction()
 }
 
 function EmailFunction()
-{
+ {
   //EmailJQuery validation (Border Change Validation)
   var emailElement = document.getElementById("email");
   var email = emailElement.value;
-  //console.log("Email Changed : " + email + "InnetHtml : " + emailElement.innerHTML + ", " + emailElement.innerText + ", " + emailElement.value);
-  if(email === "")
+    //console.log("Email Changed : " + email + "InnetHtml : " + emailElement.innerHTML + ", " + emailElement.innerText + ", " + emailElement.value);
+  if(email === "^[a-zA-Z ]{1,20}$" || email === "")
   {
-    console.log("If Part executing");
+    //console.log("If Part executing");
     emailElement.style.borderColor = "#104c91";
   }
   else if(!email.text(email))   
   {
     emailElement.style.borderColor = "red";
   }    
-  else{
+  else
+  {
     emailElement.style.borderColor = "red";
   }  
 }
@@ -133,18 +134,18 @@ function MessageFunction()
 
 }
 
-function myFunction() 
-{
-  var x = document.getElementById("myDIV");
+/* function myFunction() 
+ {
+   var x = document.getElementById("testimonials");
   if(x.style.display === "none" || x.style.display === " ")
   {
     x.style.display = "block";
   } 
-  else
-  {
+   else
+   {
     x.style.display = "none";
-  }
-}
+   }
+ }*/
 
 </script>
 <style>
@@ -179,7 +180,7 @@ function myFunction()
         
         <h1><img src="assets/img/portfolio/CSureInfotechLogo.png" class="CSureText CsureinfotechImg"></h1>
       </a>
-      <nav id="navbar" class="navbar bg-dark">
+      <nav id="navbar" class="navbar">
         <ul class="">
           <li><a href="#hero">Home</a></li>
           <li><a href="#about">About</a></li>

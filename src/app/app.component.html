@@ -200,7 +200,7 @@
     </section><!-- End Our Services Section -->
     
       <!-- ======= testimonials Section ======= -->
-    <section id="testimonials" class="testimonials bg-danger">
+    <section id="testimonials" class="testimonials bg-danger" id="testimonials" *ngIf="Isshow">
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
@@ -243,7 +243,7 @@
 
 
     <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio sections-bg" style="margin-top: 30px;">
+    <section id="portfolio" class="portfolio sections-bg">
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
@@ -727,7 +727,7 @@
                   <span class="text-danger p-1">{{ nameErrorMsg }}</span>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control AllContactDivColor" style="border-radius: 10px;" name="email" #email placeholder="example@gmail.com" id="email"  pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" (input)="EmailClickEvent(email.value)" onkeypress="EmailFunction();"/>
+                  <input type="email" class="form-control AllContactDivColor" style="border-radius: 10px;" name="email" #email placeholder="example@gmail.com" id="email"  pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" (input)="EmailClickEvent(email.value)" onkeypress="EmailFunction()" />
                   <span class="text-danger p-1">{{emailErrorMsg}}</span>
                 </div>
               </div>
@@ -740,13 +740,13 @@
                 <span class="text-danger p-1">{{messageErrorMsg}}</span>
               </div>
               <div class="text-center">
-                <button type="button" class="btn w-100 SubmitButton" onclick="changeStyle()"  (click)="isEmailSet()" (click)="onClick(name.value,email.value,subject.value,message.value)" onclick="myFunction()">Send Message</button>
+                <button type="button" class="btn w-100 SubmitButton" onclick="changeStyle()"  (click)="isEmailSet()" (click)="onClick(name.value,email.value,subject.value,message.value)">Send Message</button>
               </div>
             </form> 
           </div><!-- End Contact Form -->
           
           
-          <div class="info-item d-flex bg-success DivContact" *ngIf="visible" role="alert" id="myDIV">
+          <div class="info-item d-flex bg-success DivContact" *ngIf="visible">
             <i class="bi bi-check-circle flex-shrink-0"></i> 
             <div>
               <h4>Submitted.<a href="#" aria-hidden="true" style="margin-left: 1070px;" class="text-white">&times;</a></h4>

@@ -17,6 +17,7 @@ export class AppComponent {
   public postJsonValue:any;
   public ReviewList:any; // API Reviws Data Varible
   public PortfolioList:any; // API Portfolio Data Varible
+  Isshow: boolean = true;
 
 
   constructor(private http:HttpClient) 
@@ -25,11 +26,12 @@ export class AppComponent {
 
     var response = this.http.get('https://localhost:7129/api/Data/Reviews').subscribe((data) =>   // Link ne update karvani
     {
+      debugger
       console.log("Reviws API call compeleted" + data);   
-
+     
       this.ReviewList = data; // API Reviws Data Send -> Website
       console.log(this.ReviewList ); // API Reviws Data Send -> Website
-
+      // this.Isshow = true;
       console.log("https://localhost:7129/api/Data/Reviews Reviws api call completed : " + data);
 
     });       
@@ -62,15 +64,13 @@ export class AppComponent {
       userId: 1
     };
 
-    this.http.post('https://jsonplaceholder.typicode.com/posts',body).subscribe((data) =>
-      {
+    this.http.post('https://jsonplaceholder.typicode.com/posts',body).subscribe((data) =>{
         console.log(data);
         this.postJsonValue = data;
       }
     );
   }
 
-  
   submitted = false;
   name = "";
   color = "";
@@ -94,33 +94,43 @@ export class AppComponent {
 
   onClick(name: string , email: string, subject: string, message: string)
   {
-    if(name == "" || name == null){
+    /*if(name == "" || name == null)
+    {
       this.nameErrorMsg = "Please enter your name";
     }
-    else{
+    else
+    {
       this.nameErrorMsg = " ";
-    }
-    /*if(email == "null" || email == "" || email == "[a-z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"){
-      this.emailErrorMsg = "Please enter your email";
-    }else {
-      this.emailErrorMsg = "";
     }*/
-    if(subject == "" || subject == null){
+    if(email == "null" || email == "" || email == "[a-z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$")
+    {
+      this.emailErrorMsg = "Please enter your email";
+    }
+    else 
+    {
+      this.emailErrorMsg = "";
+    }
+    if(subject == "" || subject == null)
+    {
       this.subjectErrorMsg = "Please enter your subject";
-    }else{
+    }
+    else
+    {
       this.subjectErrorMsg = "";
     }
-    if(message == "" || message == null){
-      this.messageErrorMsg = "Please enter message";
-    }else{
+
+    if(message == "" || message == null)
+    {
+      this.messageErrorMsg = "Please enter your message";
+    }
+    else
+    {
       this.messageErrorMsg = "";
     }
-    
 
     //  API call code   //
     console.log("Call To API");
     
-
     if(name == "" || email == "" || subject == "" || message == "")
     {
       console.log ("Invalid " + name);
@@ -139,32 +149,35 @@ export class AppComponent {
       else if(!pattern.test(name))
       {
         //console.log("Successfully Name");
-        this.nameErrorMsg = "Please enter proper name";  
+        this.nameErrorMsg = "";  // Please enter proper name
       }
-      else{
+      else
+      {
         this.nameErrorMsg = "";
       }
-``
-      //Email Validation;
-      var pattern = new RegExp("^[a-z0-9]+@[a-z]+\.[a-z]{2,4}$");
+      
+       /*//Email Validation;
+      var pattern = new RegExp("([a-zA-Z0-9_.-]+)@([a-zA-Z]+)([\.])([a-zA-Z]+)");
 
       console.log("Value : "+ pattern);
 
-      if(email == "")
+     if(email == "")
       {
-        console.log("NotSuccessfully");
+        //debugger
+        // console.log("NotSuccessfully");
         this.emailErrorMsg = "Please enter your email";
         // this.emailErrorMsg.classList.remove('myClass'); 
       }
       else if(!pattern.test(email))
       {
-        //console.log("Successfully Email Address");
-        this.emailErrorMsg = "Please enter proper email";
+        this.emailErrorMsg = "Please enter proper email"; 
+        // console.log("Successfully Email Address");
+        // this.emailErrorMsg = "Please enter proper email";
       }
       else
       {
         this.emailErrorMsg = "";
-      }
+      }*/
 
     }
     else
@@ -203,45 +216,44 @@ export class AppComponent {
   {
     //console.log("name :" + name);
     //pc code start
-    //var pattern = new RegExp("^[a-zA-Z ]{1,}$");
+    var pattern = new RegExp("^[a-zA-Z ]{1,}$");
 
-    //if(name == "")
-    //{
+    if(name == "")
+    {
       //console.log("NotSuccessfully");
-      //this.nameErrorMsg = "Please enter your name";
-    //}
-    //else if(!pattern.test(name))
-    //{
+      this.nameErrorMsg = "Please enter your name";
+    }
+    else if(!pattern.test(name))
+    {
       //console.log("Successfully Name");
-      //this.nameErrorMsg = "Please enter proper name";  
-    //}
-    //else{
-      //this.nameErrorMsg = "";
-    //}
+      this.nameErrorMsg = "Please enter proper name";  
+    }
+    else{
+      this.nameErrorMsg = "";
+    }
   }
 
   // Validation EmailClickEvent //
   EmailClickEvent(email: string)
   {
-    //console.log("email :"  + email);
-    //hitesh code start
-    //var pattern = new RegExp("^[a-z0-9]+@[a-z]+\.[a-z]{2,6}$");
-
-    //if(email == "")
-    //{
-      //console.log("NotSuccessfully");
-      //this.emailErrorMsg = "Please enter your email";
-     // this.emailErrorMsg.classList.remove('myClass'); 
-    //}
-    //else if(!pattern.test(email))
-    //{
-      //console.log("Successfully Email Address");
-     // this.emailErrorMsg = "Please enter proper email";
-    //}
-    //else{
-     // this.emailErrorMsg = "";
-      
-    //}
+    var pattern = new RegExp("([a-zA-Z0-9_.-]+)@([a-zA-Z]+)([\.])([a-zA-Z]+)");
+    if(email == "")
+      {
+        // console.log("NotSuccessfully");
+        this.emailErrorMsg = "Please enter your email";
+        // this.emailErrorMsg.classList.remove('myClass'); 
+      }
+      else if(!pattern.test(email))
+      {
+        this.emailErrorMsg = "Please enter proper email"; 
+        // console.log("Successfully Email Address");
+        // this.emailErrorMsg = "Please enter proper email";
+      }
+      else
+      {
+        this.emailErrorMsg = "";
+      }
+    
   }
 
   // Validation SubjectClickEvent //
