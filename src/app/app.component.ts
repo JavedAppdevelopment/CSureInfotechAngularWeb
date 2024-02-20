@@ -17,8 +17,29 @@ export class AppComponent {
   public postJsonValue:any;
   public ReviewList:any; // API Reviws Data Varible
   public PortfolioList:any; // API Portfolio Data Varible
-  Isshow: boolean = true;
 
+  public show:boolean = false;
+  submitted = false;
+  name = "";
+  color = "";
+  email = "";
+  subject = "";
+  message = "";
+  nameErrorMsg = "";
+  emailErrorMsg = "";
+  subjectErrorMsg = "";
+  messageErrorMsg = "";
+  body: any;
+  snippet: any;
+  ReadMore:boolean = true;
+  visible:boolean = false;
+  
+  //v1:boolean = true;
+  //v2:boolean = false;
+
+  toggle() {
+    this.show = !this.show;
+  }
 
   constructor(private http:HttpClient) 
   {
@@ -26,12 +47,16 @@ export class AppComponent {
 
     var response = this.http.get('https://localhost:7129/api/Data/Reviews').subscribe((data) =>   // Link ne update karvani
     {
-      debugger
+      //debugger
       console.log("Reviws API call compeleted" + data);   
      
       this.ReviewList = data; // API Reviws Data Send -> Website
       console.log(this.ReviewList ); // API Reviws Data Send -> Website
-      // this.Isshow = true;
+      this.show = !this.show;
+
+      this.visible = !this.visible;
+
+      
       console.log("https://localhost:7129/api/Data/Reviews Reviws api call completed : " + data);
 
     });       
@@ -71,21 +96,7 @@ export class AppComponent {
     );
   }
 
-  submitted = false;
-  name = "";
-  color = "";
-  email = "";
-  subject = "";
-  message = "";
-  nameErrorMsg = "";
-  emailErrorMsg = "";
-  subjectErrorMsg = "";
-  messageErrorMsg = "";
-  body: any;
-  snippet: any;
 
-  ReadMore:boolean = true;
-  visible:boolean = false;
 
   isEmailSet(){
     this.ReadMore = !this.ReadMore; 
@@ -133,7 +144,7 @@ export class AppComponent {
     
     if(name == "" || email == "" || subject == "" || message == "")
     {
-      console.log ("Invalid " + name);
+      //console.log ("Invalid " + name);
 
       this.ReadMore = !this.ReadMore; 
       this.visible = !this.visible;
@@ -161,23 +172,23 @@ export class AppComponent {
 
       console.log("Value : "+ pattern);
 
-     if(email == "")
-      {
-        //debugger
-        // console.log("NotSuccessfully");
-        this.emailErrorMsg = "Please enter your email";
-        // this.emailErrorMsg.classList.remove('myClass'); 
-      }
-      else if(!pattern.test(email))
-      {
-        this.emailErrorMsg = "Please enter proper email"; 
-        // console.log("Successfully Email Address");
-        // this.emailErrorMsg = "Please enter proper email";
-      }
-      else
-      {
-        this.emailErrorMsg = "";
-      }*/
+      if(email == "")
+        {
+          //debugger
+          // console.log("NotSuccessfully");
+          this.emailErrorMsg = "Please enter your email";
+          // this.emailErrorMsg.classList.remove('myClass'); 
+        }
+        else if(!pattern.test(email))
+        {
+          this.emailErrorMsg = "Please enter proper email"; 
+          // console.log("Successfully Email Address");
+          // this.emailErrorMsg = "Please enter proper email";
+        }
+        else
+        {
+          this.emailErrorMsg = "";
+        }*/
 
     }
     else
@@ -297,4 +308,8 @@ export class AppComponent {
 
 }
 
+
+function FunctionVisible(arg0: () => void) {
+  throw new Error('Function not implemented.');
+}
 

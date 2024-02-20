@@ -199,9 +199,10 @@
       </div>
     </section><!-- End Our Services Section -->
     
+    
       <!-- ======= testimonials Section ======= -->
-    <section id="testimonials" class="testimonials bg-danger" id="testimonials" *ngIf="Isshow">
-      <div class="container" data-aos="fade-up">
+    <section id="testimonials" class="testimonials" [ngClass]="{'d-none':visible === false}"> 
+      <div class="container"> 
 
         <div class="section-header">
           <h2>Testimonials</h2>
@@ -209,10 +210,10 @@
         </div>
 
         <div class="slides-3 swiper">
-          <div class="swiper-wrapper" >
+          <div class="swiper-wrapper">
 
             <div class="swiper-slide" *ngFor="let Review of ReviewList;">
-              <div class="testimonial-wrap">
+              <div class="testimonial-wrap"  *ngIf="show">
                 <div class="testimonial-item">
                   <div class="d-flex align-items-center">
                     <div>
@@ -231,14 +232,12 @@
                 </div>
               </div>
             </div> 
-
-           
-
+            
           </div>
-          <div class="swiper-pagination"></div>
+          
         </div>
-
-      </div>
+       <div class="swiper-pagination"></div>
+       </div> 
     </section><!-- End Testimonials Section -->
 
 
@@ -704,7 +703,7 @@
                 <i class="bi bi-phone flex-shrink-0"></i>
                 <div>
                   <h4>Call:</h4>
-                  <p><a href="https://phone.com/9737920720" class="text-white">+91 9737920720</a></p>
+                  <p><a href="tel:9737920720" class="text-white">+91 9737920720</a></p>
                 </div>
               </div><!-- End Info Item -->
     
@@ -760,5 +759,6 @@
 
       </div>
     </section><!-- End Contact Form -->
+    
   </main><!-- End #main -->
   
