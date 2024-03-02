@@ -119,7 +119,7 @@ export class AppComponent {
     }
     else 
     {
-      this.emailErrorMsg = "";
+      this.emailErrorMsg = "Please enter your email";
     }
     if(subject == "" || subject == null)
     {
