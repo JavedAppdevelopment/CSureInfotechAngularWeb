@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
    */
   const preloader = document.querySelector('#preloader');
   if (preloader) {
+    debugger
     window.addEventListener('load', () => {
       preloader.remove();
     });
@@ -35,8 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (nextElement) nextElement.classList.remove('sticked-header-offset');
       }
     }
-    window.addEventListener('load', headerFixed);
-    document.addEventListener('scroll', headerFixed);
+    // window.addEventListener('load', headerFixed);
+    // document.addEventListener('scroll', headerFixed);
   }
 
   /**
@@ -61,8 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     })
   }
-  window.addEventListener('load', navbarlinksActive);
-  document.addEventListener('scroll', navbarlinksActive);
+  // window.addEventListener('load', navbarlinksActive);
+  // document.addEventListener('scroll', navbarlinksActive);
 
   /**
    * Mobile nav toggle
