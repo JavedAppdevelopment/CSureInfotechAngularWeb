@@ -177,7 +177,12 @@ section {
   border-radius: 50px;
   transition: all 0.4s;
   margin-right: 10px;
-  margin-bottom: 43px;
+}
+
+@media only screen and (min-width: 350px) {
+  .scroll-top.active {
+    margin-bottom: 55px;
+  }
 }
 
 .scroll-top i {
@@ -511,7 +516,7 @@ section {
     top: 0;
     right: -100%;
     width: 100%;
-    max-width: 400px;
+    max-width: 100%;
     bottom: 0;
     transition: 0.3s;
     z-index: 9997;
@@ -802,7 +807,6 @@ section {
   background-color: #fff;
   opacity: 1;
   background-color: #ddd;
-  background-color: green;
 }
 
 .clients .swiper-pagination .swiper-pagination-bullet-active {
@@ -2673,6 +2677,13 @@ display: contents;
 .footer .footer-info p {
   font-size: 14px;
   font-family: var(--font-primary);
+}
+
+.FooterLink{
+  color: #104c91;
+}
+.FooterLink:hover{
+  color: #0369af;
 }
 
 .footer .social-links a {

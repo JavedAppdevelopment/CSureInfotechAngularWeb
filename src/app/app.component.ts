@@ -121,7 +121,7 @@ export class AppComponent {
     {
       this.emailErrorMsg = "Please enter your email";
     }
-    if(subject == "" || subject == null)
+    if(subject == "" || subject == null || subject == "[A-Za-z0-9]+\!\?\:\;+$")
     {
       this.subjectErrorMsg = "Please enter your subject";
     }
@@ -216,10 +216,8 @@ export class AppComponent {
           //this.ReadMore = !this.ReadMore; 
           //this.visible = !this.visible;
         }        
-
       );   
     }
-
   }
 
   // Validation NameClickEvent //
@@ -228,11 +226,14 @@ export class AppComponent {
     //console.log("name :" + name);
     //pc code start
     var pattern = new RegExp("^[a-zA-Z ]{1,}$");
-
+    //var x = document.getElementById("name");    
+    
     if(name == "")
     {
       //console.log("NotSuccessfully");
       this.nameErrorMsg = "Please enter your name";
+      //x.style.borderColor = "red";
+      
     }
     else if(!pattern.test(name))
     {
@@ -247,7 +248,7 @@ export class AppComponent {
   // Validation EmailClickEvent //
   EmailClickEvent(email: string)
   {
-    var pattern = new RegExp("([a-zA-Z0-9_.-]+)@([a-zA-Z]+)([\.])([a-zA-Z]+)");
+    var pattern = new RegExp("([a-zA-Z0-9_.-]+)@([a-zA-Z]+)([\.])([a-zA-Z]+){2,}");
     if(email == "")
       {
         // console.log("NotSuccessfully");
@@ -264,7 +265,6 @@ export class AppComponent {
       {
         this.emailErrorMsg = "";
       }
-    
   }
 
   // Validation SubjectClickEvent //
@@ -272,15 +272,14 @@ export class AppComponent {
   {
     //console.log("subject :"  + subject);
 
-    var pattern = new RegExp("^[a-zA-Z]+''{1,20}$");
-    
+    var pattern = new RegExp("^[A-Za-z0-9\"'!?:;_\\s]+$");
     if(subject == "")
     {
       this.subjectErrorMsg= "Please enter your subject";
     }
     else if(!pattern.test(subject))
     {
-      this.subjectErrorMsg = "";
+      this.subjectErrorMsg = "Please enter proper subject";
     }
     else{
       this.subjectErrorMsg = "";
@@ -292,7 +291,8 @@ export class AppComponent {
   {
     console.log("message :"  + message);
 
-    var pattern = new RegExp("^[a-zA-Z ]{1,50}$");
+    //var pattern = new RegExp("^[a-zA-Z ]{1,50}$");
+    var pattern = new RegExp("^[A-Za-z0-9]+\!\?\:\;+$");
     if(message == "")
     {
       this.messageErrorMsg = "Please enter your message";
@@ -309,7 +309,7 @@ export class AppComponent {
 }
 
 
-function FunctionVisible(arg0: () => void) {
+/*function FunctionVisible(arg0: () => void) {
   throw new Error('Function not implemented.');
-}
+}*/
 

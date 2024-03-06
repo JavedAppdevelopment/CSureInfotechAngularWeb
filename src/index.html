@@ -58,18 +58,15 @@ function NameFunction()
   var nameElement = document.getElementById("name");
   var name = nameElement.value;
   //console.log("Name Changed : " + name + "InnetHtml : " + nameElement.innerHTML + ", " + nameElement.innerText + ", " + nameElement.value);
-  if(name === "^[a-zA-Z ]{1,}$" || name === "")
+  
+  if(name === "" || name === null)
   {
-    //console.log("If Part executing");
-    nameElement.style.borderColor = "#104c91";
+    nameElement.style.borderColor = "red";
   }
-  else if(!name.text(name))   
+  else   
   {
-    nameElement.style.borderColor = "red";
+    nameElement.style.borderColor = "#104c91";
   }    
-  else{
-    nameElement.style.borderColor = "red";
-  }  
 }
 
 function EmailFunction()
@@ -78,19 +75,14 @@ function EmailFunction()
   var emailElement = document.getElementById("email");
   var email = emailElement.value;
     //console.log("Email Changed : " + email + "InnetHtml : " + emailElement.innerHTML + ", " + emailElement.innerText + ", " + emailElement.value);
-  if(email === "^[a-zA-Z ]{1,20}$" || email === "")
+    if(email === "" || email === null)
   {
-    //console.log("If Part executing");
-    emailElement.style.borderColor = "#104c91";
+    emailElement.style.borderColor = "red";
   }
-  else if(!email.text(email))   
+  else   
   {
-    emailElement.style.borderColor = "red";
+    emailElement.style.borderColor = "#104c91";
   }    
-  else
-  {
-    emailElement.style.borderColor = "red";
-  }  
 }
 
 function SubjectFunction()
@@ -99,18 +91,14 @@ function SubjectFunction()
   var subjectElement = document.getElementById("subject");
   var subject = subjectElement.value;
   //console.log("Subject Changed : " + subject + "InnetHtml : " + subjectElement.innerHTML + ", " + subjectElement.innerText + ", " + subjectElement.value);
-  if(subject === "^[a-zA-Z ]{1,20}$" || subject === "")
-  {
-    //console.log("If Part executing");
-    subjectElement.style.borderColor = "#104c91";
-  }
-  else if(!subject.text(subject))   
+  if(subject === "" || subject === null)
   {
     subjectElement.style.borderColor = "red";
+  }
+  else   
+  {
+    subjectElement.style.borderColor = "#104c91";
   }    
-  else{
-    subjectElement.style.borderColor = "red"
-  }  
 }
   
 function MessageFunction()
@@ -119,18 +107,14 @@ function MessageFunction()
   var messageElement = document.getElementById("message");
   var message = messageElement.value;
   //console.log("Message Changed : " + message + "InnetHtml : " + messageElement.innerHTML + ", " + messageElement.innerText + ", " + messageElement.value);
-  if(message === "^[a-zA-Z ]{1,50}$" || message === "")
-  {
-    //console.log("If Part executing");
-    messageElement.style.borderColor = "#104c91";
-  }
-  else if(!message.text(message))   
+  if(message === "" || message === null)
   {
     messageElement.style.borderColor = "red";
-  }    
-  else{
-    messageElement.style.borderColor = "red"
-  }  
+  }
+  else   
+  {
+    messageElement.style.borderColor = "#104c91";
+  }   
 
 }
 
@@ -153,6 +137,9 @@ function MessageFunction()
   .CsureinfotechImg{
     width: 140px;
   } 
+  .MenuLink{
+    height:100%;
+  }
 </style>
 
 <body>
@@ -161,8 +148,8 @@ function MessageFunction()
   <section id="topbar" class="topbar d-flex align-items-center">
     <div class="container d-flex justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@csureinfo.tech</a></i>
-        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+91 9737920720</span></i>
+        <i class="bi bi-envelope d-flex align-items-center"><a href="https://mail.google.com/mail/u/0/#inbox?compose=javedkalanoya@gmail.com">contact@csureinfo.tech</a></i>
+        <i class="bi bi-phone d-flex align-items-center ms-4"><a href="tel:9737920720">+91 9737920720</a></i>
       </div>
       <div class="social-links d-none d-md-flex align-items-center">
             <a href="//api.whatsapp.com/send?phone=919737920720&text=WHATEVER_LINK_OR_TEXT_YOU_WANT_TO_SEND" class="twitter"><i class="bi bi-whatsapp"></i></a>
@@ -173,16 +160,16 @@ function MessageFunction()
     </div>
   </section><!-- End Top Bar -->
 
-  <header id="header" class="header d-flex align-items-center">
+  <header id="header" class="header d-flex align-items-center mt-0">
 
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
         
         <h1><img src="assets/img/portfolio/CSureInfotechLogo.png" class="CSureText CsureinfotechImg"></h1>
       </a>
-      <nav id="navbar" class="navbar"  style="height:100%;">
+      <nav id="navbar" class="navbar">
         <ul class="">
           <li><a href="#hero">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -200,7 +187,7 @@ function MessageFunction()
   <!-- End Header -->
 
   <!-- ======= Hero Section   ======= -->
-  <section id="hero" class="hero">
+  <section id="hero" class="hero mt-0">
     <div class="container position-relative"> 
       <div class="row gy-5 mt-0" data-aos="fade-in">
         <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
@@ -248,9 +235,11 @@ function MessageFunction()
               <h4 class="title"><a ``class="stretched-link">Web Application</a></h4>
             </div>
           </div><!--End Icon Box -->
+          
         </div>
       </div>
     </div>
+
     </div>
   </section>
   <!-- End Hero Section -->
@@ -303,8 +292,8 @@ function MessageFunction()
             Office No: 9-10, Second Floor,<br>
             Ashok Arcade, Above PHD Mart, Near Kuber Baug,<br>
             Mahuva-364290.<br><br>
-            <strong>Phone: </strong>+91 9737920720<br>
-            <strong>Email:</strong>contact@csureinfo.tech<br>
+            <strong>Phone: </strong><a href="tel:9737920720" class="FooterLink">+91 9737920720</a><br>
+            <strong>Email:</strong><a href="https://mail.google.com/mail/u/0/#inbox?compose=javedkalanoya@gmail.com" class="FooterLink">contact@csureinfo.tech</a><br>
           </p>
         </div>
 
