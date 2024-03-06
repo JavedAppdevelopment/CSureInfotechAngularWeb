@@ -11,13 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /**
    * Preloader
    */
-  const preloader = document.querySelector('#preloader');
-  if (preloader) {
-    debugger
-    window.addEventListener('load', () => {
-      preloader.remove();
-    });
-  }
+  
 
   /**
    * Sticky Header on Scroll
