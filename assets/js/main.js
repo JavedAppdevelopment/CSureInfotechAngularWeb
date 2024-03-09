@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /**
    * Sticky Header on Scroll
-   */yieldy
+   */
   const selectHeader = document.querySelector('#header');
   if (selectHeader) {
     let headerOffset = selectHeader.offsetTop;
