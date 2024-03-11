@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (nextElement) nextElement.classList.remove('sticked-header-offset');
       }
     }
-    //window.addEventListener('load', headerFixed);
+    window.addEventListener('load', headerFixed);
     //document.addEventListener('scroll', headerFixed);
   }
 
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     })
   }
-  //window.addEventListener('load', navbarlinksActive);
+  window.addEventListener('load', navbarlinksActive);
   //document.addEventListener('scroll', navbarlinksActive);
 
   /**
