@@ -96,8 +96,6 @@ export class AppComponent {
     );
   }
 
-
-
   isEmailSet(){
     this.ReadMore = !this.ReadMore; 
     this.visible = !this.visible
@@ -233,14 +231,14 @@ export class AppComponent {
       //console.log("NotSuccessfully");
       this.nameErrorMsg = "Please enter your name";
       //x.style.borderColor = "red";
-      
     }
     else if(!pattern.test(name))
     {
       //console.log("Successfully Name");
       this.nameErrorMsg = "Please enter proper name";  
     }
-    else{
+    else
+    {
       this.nameErrorMsg = "";
     }
   }
@@ -307,9 +305,3 @@ export class AppComponent {
   }
 
 }
-
-
-/*function FunctionVisible(arg0: () => void) {
-  throw new Error('Function not implemented.');
-}*/
-
