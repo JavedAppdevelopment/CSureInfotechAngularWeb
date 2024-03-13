@@ -105,14 +105,6 @@ export class AppComponent {
 
   onClick(name: string , email: string, subject: string, message: string)
   {
-    /*if(name == "" || name == null)
-    {
-      this.nameErrorMsg = "Please enter your name";
-    }
-    else
-    {
-      this.nameErrorMsg = " ";
-    }*/
     if(email == "null" || email == "" || email == "[a-z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$")
     {
       this.emailErrorMsg = "Please enter your email";
