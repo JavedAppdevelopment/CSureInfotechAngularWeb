@@ -330,7 +330,7 @@ section {
 }
 
 .sticked-header-offset {
-  margin-top: 70px;
+  margin-top: 0px;
 }
 
 section {
@@ -393,7 +393,6 @@ section {
     left: 0;
     background-color: #1f8ac0;
     visibility: hidden;
-    width: 0px;
     transition: all 0.3s ease-in-out 0s;
     /* background-color: red; */
   }
@@ -511,7 +510,6 @@ section {
     top: 0;
     right: -100%;
     width: 100%;
-    max-width: 400px;
     bottom: 0;
     transition: 0.3s;
     z-index: 9997;
