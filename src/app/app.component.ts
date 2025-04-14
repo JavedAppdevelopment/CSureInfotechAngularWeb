@@ -45,7 +45,7 @@ export class AppComponent {
   {
     console.log ("Reviws API Call...");
 
-    var response = this.http.get('https://localhost:7129/api/Data/Reviews').subscribe((data) =>   // Link ne update karvani
+    var response = this.http.get('https://localhost:7270/api/Data/Reviews').subscribe((data) =>   // Link ne update karvani
     {
       //debugger
       console.log("Reviws API call compeleted" + data);   
@@ -63,7 +63,7 @@ export class AppComponent {
 
     console.log("PortfolioModel API Call...");
 
-    var var_name =this.http.get('https://localhost:7129/api/DataPortfolio/Portfolio').subscribe((data)=> // Link ne update karvani
+    var var_name =this.http.get('https://localhost:7270/api/DataPortfolio/Portfolio').subscribe((data)=> // Link ne update karvani
     {
 
       console.log("Reviws API call compeleted" + data);  
@@ -117,7 +117,8 @@ export class AppComponent {
     }
     else 
     {
-      this.emailErrorMsg = "Please enter your email";
+      this.emailErrorMsg =" "; 
+      //this.emailErrorMsg = "Please enter your email";
     }
     if(subject == "" || subject == null || subject == "[A-Za-z0-9]+\!\?\:\;+$")
     {
@@ -195,7 +196,7 @@ export class AppComponent {
 
       let body = { Name: name, Subject: subject, Email: email, Message: message }; // passs
     
-        var response = this.http.post('https://localhost:7129/Mail/SendMail',body).subscribe((data) =>
+        var response = this.http.post('https://localhost:7270/Mail/SendMail',body).subscribe((data) =>
         {
           console.log("API call compeleted" + data);      
 
