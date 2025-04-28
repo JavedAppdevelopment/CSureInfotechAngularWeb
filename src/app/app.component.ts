@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component, ElementRef, ViewChild} from '@angular/core';
 import { FormControl, FormGroup} from '@angular/forms';
 import { APIServiceService } from './apiservice.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -18,6 +18,11 @@ export class AppComponent {
   public ReviewList:any; // API Reviws Data Varible
   public PortfolioList:any; // API Portfolio Data Varible
 
+  @ViewChild('name') nameInput!: ElementRef;
+  @ViewChild('email') emailInput!: ElementRef;
+  @ViewChild('subject') subjectInput!: ElementRef;
+  @ViewChild('message') messageInput!: ElementRef;
+
   public show:boolean = false;
   submitted = false;
   name = "";
@@ -33,6 +38,7 @@ export class AppComponent {
   snippet: any;
   ReadMore:boolean = true;
   visible:boolean = false;
+  visiblee:boolean = false;
   
   //v1:boolean = true;
   //v2:boolean = false;
@@ -45,7 +51,7 @@ export class AppComponent {
   {
     console.log ("Reviws API Call...");
 
-    var response = this.http.get('https://localhost:7270/api/Data/Reviews').subscribe((data) =>   // Link ne update karvani
+    var response = this.http.get('http://api.csureinfotech.com/api/Data/Reviews').subscribe((data) =>   // Link ne update karvani
     {
       //debugger
       console.log("Reviws API call compeleted" + data);   
@@ -63,7 +69,7 @@ export class AppComponent {
 
     console.log("PortfolioModel API Call...");
 
-    var var_name =this.http.get('https://localhost:7270/api/DataPortfolio/Portfolio').subscribe((data)=> // Link ne update karvani
+    var var_name =this.http.get('http://api.csureinfotech.com/api/DataPortfolio/Portfolio').subscribe((data)=> // Link ne update karvani
     {
 
       console.log("Reviws API call compeleted" + data);  
@@ -196,20 +202,24 @@ export class AppComponent {
 
       let body = { Name: name, Subject: subject, Email: email, Message: message }; // passs
     
-        var response = this.http.post('https://localhost:7270/Mail/SendMail',body).subscribe((data) =>
+        var response = this.http.post('http://api.csureinfotech.com/Mail/SendMail',body).subscribe((data) =>
         {
           console.log("API call compeleted" + data);      
-
+          this.visiblee = true;
           this.postJsonValue = data;
           this.ReadMore = !this.ReadMore; 
 
           setTimeout(() =>
           {
             //console.log("SetTimeout Function Executed...");
-            this.visible = false;
+            this.visiblee = false;
           },10000);     
           //console.log("setTimeout() example...");
-          
+             // ✅ Clear the form inputs manually
+            this.nameInput.nativeElement.value = '';
+            this.emailInput.nativeElement.value = '';
+            this.subjectInput.nativeElement.value = '';
+            this.messageInput.nativeElement.value = '';
           console.log("https://localhost:7129/Mail/SendMail api call completed : " + data);
     
           //this.ReadMore = !this.ReadMore; 

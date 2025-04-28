@@ -746,10 +746,10 @@
           </div><!-- End Contact Form -->
           
           
-          <div class="info-item d-flex bg-success DivContact" *ngIf="visible">
+          <div class="info-item d-flex bg-success DivContact" *ngIf="visiblee">
             <i class="bi bi-check-circle flex-shrink-0"></i> 
             <div>
-              <h4>Submitted.<a href="#" aria-hidden="true" style="margin-left: 1070px;" class="text-white">&times;</a></h4>
+              <h4>Submitted.<a href="#" aria-hidden="true" style="margin-left: 1070px;" class="text-white" (click)="visiblee = false">&times;</a></h4>
               <p>Thank you for contact-us we will call you back.</p>
             </div>
           </div><!-- End Info Item -->
